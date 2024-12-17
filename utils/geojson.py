@@ -110,6 +110,25 @@ def create_graph_svg(bounds, nodes, min_distance):
     svg += "</svg>\n"
     return svg
 
+def create_digraph_dot(bounds, nodes):
+    edges = set()
+
+    dot = "digraph {\n"
+    for node in nodes:
+        dot += f"  node_{int(node['id'])}[label=\"{int(node['id'])}\", shape=\"circle\"]\n"
+        for edge in node['edges']:
+            edge_id_a = f"{int(node['id'])}->${edge}"
+            edge_id_b = f"{edge}->${int(node['id'])}"
+            if edge_id_a not in edges:
+                dot += f"{int(node['id'])} -> {edge}\n"
+                edges.add(edge_id_a)
+            if edge_id_b not in edges:
+                dot += f"{edge} -> {int(node['id'])}\n"
+                edges.add(edge_id_b)
+    dot += "}\n"
+    return dot
+
+
 def create_graph_dot(bounds, nodes):
     edges = set()
 
@@ -206,7 +225,7 @@ def create_cluster_nodes_from(clusters):
     processed = 0
 
     # Generar el grafo en formato DOT
-    for cluster_hash, cluster in clusters.items():
+    for _, cluster in clusters.items():
         node_id = cluster['node']
         if node_id not in cluster_nodes:
             cluster_nodes[node_id] = {

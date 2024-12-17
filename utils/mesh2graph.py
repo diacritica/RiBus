@@ -10,7 +10,7 @@ content = input_file.read_text(encoding='utf-8')
 data = json.loads(content)
 
 graph = geojson.create_graph_from(data)
-dot = geojson.create_graph_dot(graph['bounds'], graph['nodes'])
+dot = geojson.create_digraph_dot(graph['bounds'], graph['nodes'])
 svg = geojson.create_graph_svg(graph['bounds'], graph['nodes'], graph['min_distance'])
 
 # Guardar los archivos DOT y SVG
