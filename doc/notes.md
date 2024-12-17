@@ -28,10 +28,12 @@ A bus route has an available capacity. This is arbitrary and can be decided to a
 ### Bus route
 
 A single bus route is an array of graph nodes where:
-- All nodes represent cells that are connected by bus-friendly streets (simple directed path in Buf route Graph)
+- All nodes represent cells that are connected by bus-friendly streets (simple directed path in Bus route Graph)
 - Per node, we know the bus payload (in detail) and the bus remaining capacity
 - A node that has a dest_school frees up payload up to the children that have such dest_school
 - Ends on a dest_school cell and can have more intermediate dest_school
+
+All bus routes are added IN ORDER to a list of bus routes
 
 ### Cost function
 
@@ -45,10 +47,9 @@ Vulnerable children (wheel chair) might need a separate manual treatment after a
 
 ### Definition of neighbour solution
 
-- Given a group of routes, a neighbour solution is one that randomly picks one of those bus routes and creates a completely new route following the initialization criteria (has to end on a school, has to have at least 1 other school in its journey and has to have a length between X and Y)
+- Given a group of ordered routes, a neighbour solution is one that randomly picks one of those bus routes and creates a completely new route following the initialization criteria (has to end on a school, has to have at least 1 other school in its journey and has to have a length between X and Y)
 
 **Deprecated**
-
 - Given a groups of bus routes, a neighbour solution is one that randomnly picks one of those bus routes and then randomly substitutes a cell X for another unused adjacent cell (f(X)) while keeping the maximum distance restriction.
 - final_node (that includes a dest_school) can't be subject to this random selection but intermediate dest_schools can.
 

@@ -1,27 +1,70 @@
-import networkx as nx
 import re
 import click
 import random
 import copy
 
+import networkx as nx
+import pygraphviz as pgv
+
 import routescost
 
-
-route_structure = {"bus_capacity":55,"bus_real_capacity":53,
-                   "path":[{"id":1,"school":0,"payload":10,"time":1,"local_clusters":[{"id":345,"n":5,"school":2},{"id":666,"n":2,"school":3}],
-                            "nearby_clusters":[{"id":111,"n":2,"school":3},{"id":222,"n":1,"school":3}]},
-                    {"id":3,"school":0,"payload":12,"time":1,"local_clusters":[{"id":444,"n":2,"school":2}],"nearby_clusters":[]},
-                    {"id":7,"school":0,"payload":12,"time":0.60,"local_clusters":[],"nearby_clusters":[]},
-                    {"id":9,"school":0,"payload":19,"time":1,"local_clusters":[{"id":555,"n":3,"school":3},{"id":777,"n":2,"school":2}],
-                            "nearby_clusters":[{"id":888,"n":1,"school":3},{"id":999,"n":1,"school":3}]},
-                    {"id":20,"school":2,"payload":13,"time":2,"local_clusters":[],"nearby_clusters":[{"id":33,"n":2,"school":3},{"id":321,"n":1,"school":3}]},
-                    {"id":23,"school":0,"payload":13,"time":0.60,"local_clusters":[],"nearby_clusters":[]},
-                    {"id":12,"school":3,"payload":0,"time":2,"local_clusters":[],"nearby_clusters":[]}]}
 
 class Routesbuilder:
 
     def __init__(self):
         self.G = nx.Graph()
+
+    def init(self, buses, avg_length_of_routes, delta_length, list_of_schools, bus_grid_filename, child_grid_filename):
+
+        # list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
+
+        self.buses = buses
+        self.avg_length_of_routes = avg_length_of_routes
+        self.delta_length = delta_length
+        self.list_of_schools = list_of_schools
+
+        self.routes = []
+        bgpg = pgv.AGraph(bus_grid_filename)
+        self.bus_grid = nx.DiGraph(bgpg)
+
+        cgpg = pgv.AGraph(child_grid_filename)
+        self.child_grid = nx.Graph(cgpg)
+
+
+        for bus in buses:
+            self.routes.append(self.getFreshRoute(bus))
+
+
+
+    def getFreshRoute(self, bus):
+
+        school = random.choice(self.list_of_schools)
+        route = {"id":bus["id"], "bus_capacity":bus["capacity"], "schools":[school]}
+        length = self.avg_length_of_routes - random.choice(range(self.delta_length))
+
+
+        last_node = list(nx.dfs_edges(self.bus_grid, school["node_id"], depth_limit=length))[-1][-1]
+
+        # we also need to make sure the path goes through 1 other school TBD. For now we pick one random
+        connected_nodes = random.choice(list(nx.all_shortest_paths(self.bus_grid, school["node_id"], last_node)))
+
+        path = []
+
+        for index, node in enumerate(connected_nodes):
+            if index == 0:
+                path.append({"node_id":node, "school": [school], "0cell": [], 
+                    "1cell": [], 
+                    "2cell":[], 
+                    "payload": 0, "time": 2})
+            else:
+                path.append({"node_id":node, "school": [], "0cell": [], 
+                    "1cell": [], 
+                    "2cell":[], 
+                    "payload": 0, "time": 0})      
+        route["path"] = path
+
+        return route
+                    
 
     def initialize(self, letters, language, start, end):
 
