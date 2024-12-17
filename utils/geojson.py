@@ -28,6 +28,29 @@ def compute_graph_bounds(data):
     bounds['height'] = bounds['bottom'] - bounds['top']
     return bounds
 
+def compute_feature_bounds(data):
+    for feature in data['features']:
+        minx = float('inf')
+        miny = float('inf')
+        maxx = float('-inf')
+        maxy = float('-inf')
+
+        for coordinate in feature['geometry']['coordinates'][0][0]:
+            x = coordinate[0]
+            y = coordinate[1]
+
+            maxx = max(x, maxx)
+            maxy = max(y, maxy)
+            minx = min(x, minx)
+            miny = min(y, miny)
+
+        feature['properties']['left'] = minx
+        feature['properties']['right'] = maxx
+        feature['properties']['top'] = miny
+        feature['properties']['bottom'] = maxy
+
+    return data
+
 def create_graph_nodes_from_features(data):
     nodes = []
 
