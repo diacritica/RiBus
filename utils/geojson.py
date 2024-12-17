@@ -141,6 +141,9 @@ def find_nearest_node(nodes, x, y):
             found_node = node
     return [found_node, distance]
 
+#
+# Creates a signle cluster
+#
 cluster_id = 9999
 def create_cluster():
     global cluster_id
@@ -148,19 +151,19 @@ def create_cluster():
     return {
         'id': f'cluster_{cluster_id}',
         'count': 0,
-        'schools': {}
+        'distance': 0,
+        'coordinates': {},
+        'students': []
     }
 
+def get_cluster_hash(x, y, school_id):
+    return f'{x}:{y}:{school_id}'
+
 #
-# Creates a list of dots from a geojson.
+# Creates clusters based on the coordinates and the schools
 #
-def create_students_from(nodes, data, min_distance):
-    nodes_data = {}
+def create_clusters_from(nodes, data):
     clusters = {}
-
-    processed = 0
-
-    # Generar el grafo en formato DOT
     for feature in data['features']:
         geometry = feature['geometry']
         if geometry['type'] != 'Point':
@@ -171,45 +174,65 @@ def create_students_from(nodes, data, min_distance):
 
         student_id = feature['properties']['id']
         school_id = feature['properties']['colegio']
-        # NOTA: No todos los estudiantes en estudiantes.geojson
-        # tienen la propiedad 'distancia'.
-        # distance = feature['properties']['distancia']
+        distance = feature['properties']['distancia']
+
+        cluster_hash = get_cluster_hash(x, y, school_id)
+        if cluster_hash not in clusters:
+            clusters[cluster_hash] = create_cluster()
+
+        cluster = clusters[cluster_hash]
+
+        cluster['coordinates']['x'] = x
+        cluster['coordinates']['y'] = y
+        cluster['distance'] = distance
 
         [node, distance] = find_nearest_node(nodes, x, y)
         if node is None:
-            raise ValueError(f'Node not found for feature {int(feature['properties']['id'])}')
+            raise ValueError(f'Node not found for feature {student_id}')
 
-        if distance > min_distance:
-            raise ValueError(f'Feature student_{int(feature['properties']['id'])} is outside the node node_{int(node['id'])} by {distance - min_distance} (processed {int(processed)})')
+        node_id = node['id']
+        cluster['school'] = school_id
+        cluster['node'] = f'node_{int(node_id)}'
+        cluster['students'].append(student_id)
 
-        node_id = f'node_{int(node['id'])}'
-        if node_id not in nodes_data:
-            nodes_data[node_id] = {
-                'id': node_id,
-                'clusters': {}
+    return clusters
+
+#
+# Creates a list of dots from a geojson.
+#
+def create_cluster_nodes_from(clusters):
+    cluster_nodes = {}
+
+    processed = 0
+
+    # Generar el grafo en formato DOT
+    for cluster_hash, cluster in clusters.items():
+        node_id = cluster['node']
+        if node_id not in cluster_nodes:
+            cluster_nodes[node_id] = {
+                'count': 0,
+                'schools': {}
             }
 
-        cluster_coords = f'{x}:{y}'
-        if cluster_coords not in clusters:
-            clusters[cluster_coords] = create_cluster()
+        cluster_node = cluster_nodes[node_id]
 
-        cluster = clusters[cluster_coords]
-        cluster_id = cluster['id']
-        if cluster_coords not in nodes_data[node_id]['clusters']:
-            nodes_data[node_id]['clusters'][cluster_id] = cluster
+        school_id = cluster['school']
+        if school_id not in cluster_node['schools']:
+            cluster_node['schools'][school_id] = []
 
-        if school_id not in cluster['schools']:
-            cluster['schools'][school_id] = { 'count': 0, 'list': [] }
-
-        cluster['schools'][school_id]['list'].append(f'student_{int(student_id)}')
-        cluster['schools'][school_id]['count'] = len(cluster['schools'][school_id]['list'])
-
-        for _, value in cluster['schools'].items():
-            cluster['count'] = value['count']
+        cluster_node['schools'][school_id].append({
+            'id': cluster['id'],
+            'count': len(cluster['students'])
+        })
 
         processed += 1
 
-    return nodes_data
+    for node_id, cluster_node in cluster_nodes.items():
+        schools = cluster_node['schools']
+        for school_id, school in schools.items():
+            sorted(school, key=lambda school_cluster: school_cluster['count'], reverse=True)
+
+    return cluster_nodes
 
 #
 # Creates a graph from a geojson.

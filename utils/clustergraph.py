@@ -19,6 +19,8 @@ if mesh_data['crs']['properties']['name'] != crs or students_data['crs']['proper
     raise ValueError('Invalid CRS')
 
 mesh_graph = geojson.create_graph_from(mesh_data)
-students = geojson.create_students_from(mesh_graph['nodes'], students_data, mesh_graph['min_distance'])
+clusters = geojson.create_clusters_from(mesh_graph['nodes'], students_data)
+cluster_nodes = geojson.create_cluster_nodes_from(clusters)
 
-print(json.dumps(students))
+#print(json.dumps(clusters))
+print(json.dumps(cluster_nodes))
