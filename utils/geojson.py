@@ -141,11 +141,22 @@ def find_nearest_node(nodes, x, y):
             found_node = node
     return [found_node, distance]
 
+cluster_id = 9999
+def create_cluster():
+    global cluster_id
+    cluster_id += 1
+    return {
+        'id': f'cluster_{cluster_id}',
+        'count': 0,
+        'schools': {}
+    }
+
 #
 # Creates a list of dots from a geojson.
 #
 def create_students_from(nodes, data, min_distance):
     nodes_data = {}
+    clusters = {}
 
     processed = 0
 
@@ -175,13 +186,27 @@ def create_students_from(nodes, data, min_distance):
         if node_id not in nodes_data:
             nodes_data[node_id] = {
                 'id': node_id,
-                'schools': {},
+                'clusters': {}
             }
 
-        if school_id not in nodes_data[node_id]['schools']:
-            nodes_data[node_id]['schools'][school_id] = []
+        cluster_coords = f'{x}:{y}'
+        if cluster_coords not in clusters:
+            clusters[cluster_coords] = create_cluster()
 
-        nodes_data[node_id]['schools'][school_id].append(f'student_{int(student_id)}')
+        cluster = clusters[cluster_coords]
+        cluster_id = cluster['id']
+        if cluster_coords not in nodes_data[node_id]['clusters']:
+            nodes_data[node_id]['clusters'][cluster_id] = cluster
+
+        if school_id not in cluster['schools']:
+            cluster['schools'][school_id] = { 'count': 0, 'list': [] }
+
+        cluster['schools'][school_id]['list'].append(f'student_{int(student_id)}')
+        cluster['schools'][school_id]['count'] = len(cluster['schools'][school_id]['list'])
+
+        for _, value in cluster['schools'].items():
+            cluster['count'] = value['count']
+
         processed += 1
 
     return nodes_data
