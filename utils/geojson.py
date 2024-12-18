@@ -259,7 +259,7 @@ def create_cluster_nodes_from(nodes, clusters):
         if node_id not in cluster_nodes:
             cluster_nodes[node_id] = {
                 'count': 0,
-                'edges': list(map(lambda edge: f"node_{edge}", node['edges'])), 
+                'edges': list(map(lambda edge: f"node_{edge}", node['edges'])),
                 'schools': {}
             }
 
@@ -280,6 +280,15 @@ def create_cluster_nodes_from(nodes, clusters):
         schools = cluster_node['schools']
         for school_id, school in schools.items():
             sorted(school, key=lambda school_cluster: school_cluster['count'], reverse=True)
+
+    for node in nodes:
+        node_id = f"node_{node['id']}"
+        if node_id not in cluster_nodes:
+            cluster_nodes[node_id] = {
+                'count': 0,
+                'edges': list(map(lambda edge: f"node_{edge}", node['edges'])),
+                'schools': {}
+            }
 
     return cluster_nodes
 
