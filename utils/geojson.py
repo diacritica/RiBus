@@ -242,7 +242,7 @@ def create_clusters_from(nodes, data):
 #
 # Creates a list of dots from a geojson.
 #
-def create_cluster_nodes_from(clusters):
+def create_cluster_nodes_from(nodes, clusters):
     cluster_nodes = {}
 
     processed = 0
@@ -250,9 +250,16 @@ def create_cluster_nodes_from(clusters):
     # Generar el grafo en formato DOT
     for _, cluster in clusters.items():
         node_id = cluster['node']
+        result = [node for node in nodes if node["id"] == int(node_id.lstrip("node_"))]
+        if not result:
+            continue
+
+        [node] = result
+
         if node_id not in cluster_nodes:
             cluster_nodes[node_id] = {
                 'count': 0,
+                'edges': list(map(lambda edge: f"node_{edge}", node['edges'])), 
                 'schools': {}
             }
 
@@ -264,7 +271,7 @@ def create_cluster_nodes_from(clusters):
 
         cluster_node['schools'][school_id].append({
             'id': cluster['id'],
-            'count': len(cluster['students'])
+            'count': len(cluster['students']),
         })
 
         processed += 1

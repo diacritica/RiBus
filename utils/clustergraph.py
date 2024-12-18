@@ -20,7 +20,7 @@ if mesh_data['crs']['properties']['name'] != crs or students_data['crs']['proper
 
 mesh_graph = geojson.create_graph_from(mesh_data)
 clusters = geojson.create_clusters_from(mesh_graph['nodes'], students_data)
-cluster_nodes = geojson.create_cluster_nodes_from(clusters)
+cluster_nodes = geojson.create_cluster_nodes_from(mesh_graph['nodes'], clusters)
 
 #print(json.dumps(clusters))
 print(json.dumps(cluster_nodes))
