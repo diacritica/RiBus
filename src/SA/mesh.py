@@ -25,7 +25,7 @@ class Mesh:
         for s, cs in n_schools.items():
             for c in cs:
                 if cluster_id == c["id"]:
-                    print("we delete!",c,"from",node_id)
+                    #print("we delete!",c,"from",node_id)
                     cs.remove(c)
                     
 
