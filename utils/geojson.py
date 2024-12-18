@@ -329,3 +329,73 @@ def create_graph_from(data):
         'min_distance': min_distance,
         'num_connections': num_connections
     }
+
+def create_routes_svg(routes, schools, students, full, roads):
+    solution_colors = [
+        '#f00',
+        '#0f0',
+        '#00f',
+        '#700',
+        '#070',
+        '#007',
+        '#f0f',
+        '#ff0',
+        '#0ff',
+        '#707',
+        '#770',
+        '#077',
+    ]
+    svg = f"<svg viewBox=\"{-full['min_distance']} {-full['min_distance']} {full['bounds']['width'] + full['min_distance'] * 4} {full['bounds']['height'] + full['min_distance'] * 4}\">\n"
+    for a in full['nodes']:
+        for node_id in a['edges']:
+            result = [node for node in full['nodes'] if node["id"] == node_id]
+            if not result:
+                continue
+            [b] = result
+            svg += f"<line x1=\"{a['center']['x'] - full['bounds']['left']}\" y1=\"{a['center']['y'] - full['bounds']['top']}\" x2=\"{b['center']['x'] - full['bounds']['left']}\" y2=\"{b['center']['y'] - full['bounds']['top']}\" stroke-width=\"10\" stroke=\"#000\" />\n"
+
+    for a in roads['nodes']:
+        for node_id in a['edges']:
+            result = [node for node in roads['nodes'] if node["id"] == node_id]
+            if not result:
+                continue
+            [b] = result
+            svg += f"<line x1=\"{a['center']['x'] - full['bounds']['left']}\" y1=\"{a['center']['y'] - full['bounds']['top']}\" x2=\"{b['center']['x'] - full['bounds']['left']}\" y2=\"{b['center']['y'] - full['bounds']['top']}\" stroke-width=\"8\" stroke=\"#555\" />\n"
+
+    for node in full['nodes']:
+        svg += f"  <circle cx=\"{node['center']['x'] - full['bounds']['left']}\" cy=\"{node['center']['y'] - full['bounds']['top']}\" r=\"20\" fill=\"#000\" />\n"
+
+    for solution_index, route in enumerate(routes['solution']):
+        prev_node = None
+
+        node_last_index = len(route['path']) - 1
+        for node_index, node_step in enumerate(route['path']):
+            node_id = int(node_step['node_id'].lstrip('node_'))
+            result = [node for node in full['nodes'] if node["id"] == node_id]
+            if not result:
+                continue
+
+            [node] = result
+
+            cx = node['center']['x'] - full['bounds']['left']
+            cy = node['center']['y'] - full['bounds']['top']
+
+            if prev_node:
+                is_last_node = node_index == node_last_index
+                if is_last_node:
+                    svg += f"  <rect x=\"{cx - 30}\" y=\"{cy - 30}\" width=\"60\" height=\"60\" fill=\"{solution_colors[solution_index]}\" />\n"
+                else:
+                    svg += f"  <circle cx=\"{cx}\" cy=\"{cy}\" r=\"20\" fill=\"{solution_colors[solution_index]}\" />\n"
+            else:
+                svg += f"  <circle cx=\"{cx}\" cy=\"{cy}\" r=\"40\" fill=\"{solution_colors[solution_index]}\" />\n"
+
+
+            if prev_node:
+                svg += f"<line x1=\"{cx}\" y1=\"{cy}\" x2=\"{prev_node['center']['x'] - full['bounds']['left']}\" y2=\"{prev_node['center']['y'] - full['bounds']['top']}\" stroke-width=\"6\" stroke=\"{solution_colors[solution_index]}\" />\n"
+            prev_node = node
+
+        solution_index += 1
+
+    svg += "</svg>\n"
+    return svg
+

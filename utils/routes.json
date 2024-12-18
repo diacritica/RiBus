@@ -1,0 +1,599 @@
+{
+  "solution": [
+    {
+      "id": "A",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP JOSE HIERRO",
+          "node": "node_699"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_699",
+          "school": [
+            {
+              "id": "CEIP JOSE HIERRO",
+              "node": "node_699"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_698",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_739",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_781",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_822",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_821",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_779",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP MARIO BENEDETTI",
+          "node": "node_264"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_264",
+          "school": [
+            {
+              "id": "CEIP MARIO BENEDETTI",
+              "node": "node_264"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_221",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_220",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_219",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_177",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_176",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP RAFAEL ALBERTI",
+          "node": "node_473"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_473",
+          "school": [
+            {
+              "id": "CEIP RAFAEL ALBERTI",
+              "node": "node_473"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_474",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_517",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_559",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_602",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "bus_capacity": 60,
+      "schools": [
+        {
+          "id": "CEIPSO LA LUNA",
+          "node": "node_430"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_430",
+          "school": [
+            {
+              "id": "CEIPSO LA LUNA",
+              "node": "node_430"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_387",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_345",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_302",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_261",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_218",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_176",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP EL OLIVAR",
+          "node": "node_185"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_185",
+          "school": [
+            {
+              "id": "CEIP EL OLIVAR",
+              "node": "node_185"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_143",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_102",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP JOSE ITURZAETA",
+          "node": "node_907"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_907",
+          "school": [
+            {
+              "id": "CEIP JOSE ITURZAETA",
+              "node": "node_907"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_866",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_867",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_825",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_826",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_785",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_786",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP DULCE CHACON",
+          "node": "node_956"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_956",
+          "school": [
+            {
+              "id": "CEIP DULCE CHACON",
+              "node": "node_956"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_914",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_915",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_874",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_875",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "bus_capacity": 60,
+      "schools": [
+        {
+          "id": "CEIP LA ESCUELA",
+          "node": "node_272"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_272",
+          "school": [
+            {
+              "id": "CEIP LA ESCUELA",
+              "node": "node_272"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_271",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_270",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_311",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "bus_capacity": 55,
+      "schools": [
+        {
+          "id": "CEIP JARAMA",
+          "node": "node_607"
+        }
+      ],
+      "path": [
+        {
+          "node_id": "node_607",
+          "school": [
+            {
+              "id": "CEIP JARAMA",
+              "node": "node_607"
+            }
+          ],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 2
+        },
+        {
+          "node_id": "node_564",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_563",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_562",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        },
+        {
+          "node_id": "node_604",
+          "school": [],
+          "0cell": [],
+          "1cell": [],
+          "2cell": [],
+          "payload": 0,
+          "time": 0
+        }
+      ]
+    }
+  ],
+  "cost": 10000
+}

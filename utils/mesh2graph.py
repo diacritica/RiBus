@@ -24,7 +24,6 @@ svg = geojson.create_graph_svg(graph['bounds'], graph['nodes'], graph['min_dista
 # Guardar los archivos DOT y SVG
 dot_file = input_file.with_suffix('.dot')
 dot_file.write_text(dot, encoding='utf-8')
-print(dot)
 
 svg_file = input_file.with_suffix('.svg')
 svg_file.write_text(svg, encoding='utf-8')
