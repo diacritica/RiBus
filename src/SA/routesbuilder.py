@@ -150,5 +150,5 @@ class Routesbuilder:
 if __name__=="__main__":
 
     rb = Routesbuilder()
-    rb.initialize(6, "es", "cuñado", "tornar")
-    rb.generateNeighbour()
+    rb.init([{"id":"A","capacity":55},{"id":"B","capacity":55}],30,5,[{"school":"C1", "node_id": "node_2614"},{"school":"C2", "node_id": "node_3102"}],"busgrid.dot","childrengrid.dot")
+#    rb.generateNeighbour()
