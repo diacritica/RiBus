@@ -383,15 +383,15 @@ def create_routes_svg(routes, schools, students, full, roads):
             if prev_node:
                 is_last_node = node_index == node_last_index
                 if is_last_node:
-                    svg += f"  <rect x=\"{cx - 30}\" y=\"{cy - 30}\" width=\"60\" height=\"60\" fill=\"{solution_colors[solution_index]}\" />\n"
+                    svg += f"  <rect x=\"{cx - 60}\" y=\"{cy - 60}\" width=\"120\" height=\"120\" fill=\"{solution_colors[solution_index]}\" />\n"
                 else:
-                    svg += f"  <circle cx=\"{cx}\" cy=\"{cy}\" r=\"20\" fill=\"{solution_colors[solution_index]}\" />\n"
+                    svg += f"  <circle cx=\"{cx}\" cy=\"{cy}\" r=\"40\" fill=\"{solution_colors[solution_index]}\" />\n"
             else:
-                svg += f"  <circle cx=\"{cx}\" cy=\"{cy}\" r=\"40\" fill=\"{solution_colors[solution_index]}\" />\n"
+                svg += f"  <circle cx=\"{cx}\" cy=\"{cy}\" r=\"80\" fill=\"{solution_colors[solution_index]}\" />\n"
 
 
             if prev_node:
-                svg += f"<line x1=\"{cx}\" y1=\"{cy}\" x2=\"{prev_node['center']['x'] - full['bounds']['left']}\" y2=\"{prev_node['center']['y'] - full['bounds']['top']}\" stroke-width=\"6\" stroke=\"{solution_colors[solution_index]}\" />\n"
+                svg += f"<line x1=\"{cx}\" y1=\"{cy}\" x2=\"{prev_node['center']['x'] - full['bounds']['left']}\" y2=\"{prev_node['center']['y'] - full['bounds']['top']}\" stroke-width=\"20\" stroke=\"{solution_colors[solution_index]}\" />\n"
             prev_node = node
 
         solution_index += 1
