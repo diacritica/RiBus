@@ -2,6 +2,7 @@ import re
 import click
 import random
 import copy
+import json
 
 import networkx as nx
 import pygraphviz as pgv
@@ -38,15 +39,15 @@ class Routesbuilder:
 
     def getFreshRoute(self, bus):
 
-        school = random.choice(self.list_of_schools)
+        school = self.list_of_schools[random.choice(list(self.list_of_schools))]
         route = {"id":bus["id"], "bus_capacity":bus["capacity"], "schools":[school]}
         length = self.avg_length_of_routes - random.choice(range(self.delta_length))
 
 
-        last_node = list(nx.dfs_edges(self.bus_grid, school["node_id"], depth_limit=length))[-1][-1]
+        last_node = list(nx.dfs_edges(self.bus_grid, school["node"], depth_limit=length))[-1][-1]
 
         # we also need to make sure the path goes through 1 other school TBD. For now we pick one random
-        connected_nodes = random.choice(list(nx.all_shortest_paths(self.bus_grid, school["node_id"], last_node)))
+        connected_nodes = random.choice(list(nx.all_shortest_paths(self.bus_grid, school["node"], last_node)))
 
         path = []
 
@@ -149,6 +150,24 @@ class Routesbuilder:
 
 if __name__=="__main__":
 
+
+    # list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
+
+    buses = [{"id":"A","capacity":55},{"id":"B","capacity":55},{"id":"C","capacity":55},{"id":"D","capacity":60}]
+    avg_length_of_routes = 30
+    delta_length = 5
+ 
+    with open('../../utils/data/schools.json') as schools_file:
+        file_contents = schools_file.read()
+        list_of_schools = json.loads(file_contents)
+
+    print("list_of_schools",list_of_schools)
+
+    bus_grid_filename = "../../utils/data/malla_media_circulable_directed.dot"
+    child_grid_filename = "../../utils/data/malla_media_undirected.dot"
+ 
+
     rb = Routesbuilder()
-    rb.init([{"id":"A","capacity":55},{"id":"B","capacity":55}],30,5,[{"school":"C1", "node_id": "node_2614"},{"school":"C2", "node_id": "node_3102"}],"busgrid.dot","childrengrid.dot")
+    rb.init(buses,30,5,list_of_schools,bus_grid_filename,child_grid_filename)
 #    rb.generateNeighbour()
+
