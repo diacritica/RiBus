@@ -1,10 +1,10 @@
 import random, math
-import routesbuilder
+from routesbuilder import Routesbuilder
 
 total_attempts = 0
 chain_length = 10
-max_chains = 10
-max_attempts = 15
+max_chains = 100
+max_attempts = 30
 min_value = 0
 alpha = 0.95
 min_cost = 0
@@ -12,9 +12,9 @@ min_cost = 0
 
 initial_temperature = 250
     
-rb = routesbuilder()
-rb.initialize(a, b, c, d, e)
-best_solution = rb.solution
+rb = Routesbuilder()
+rb.initialize(6, "es", "cuñado", "tornar")
+rb.best_solution = rb.solution
 
 
 finished_calculus = False
@@ -44,13 +44,13 @@ def markov_chain(temperature):
             rb.acceptNeighbour()
             accepted_attempts += 1
 
-        print("markov...")
+        print(".",end=" ")
 
-def accept_neighbour(current, n, temperature)
+def accept_neighbour(current, n, temperature):
 
-    if n.cost <= current.cost:
+    if n["cost"] <= current["cost"]:
         return True
-    if ( (random.random) < math.exp (-(n.cost - current.cost)/temperature) ):
+    if ( random.random() < math.exp (-(n["cost"] - current["cost"])/temperature) ):
         return True
     
     return False
@@ -67,18 +67,21 @@ def cooling(initial_temperature):
     previous_cost = 2000
 
 
-    while ( (chains_without_improvement < max_chains) and (rb.solution.cost > min_cost) and (not finished_calculus)):
+    while ( (chains_without_improvement < max_chains) and (rb.best_solution["cost"] > min_cost) and (not finished_calculus)):
 
         markov_chain(temperature)
-        if rb.solution.cost >= rb.best_solution.cost:
+        if rb.solution["cost"] >= rb.best_solution["cost"]:
             chains_without_improvement += 1
         else:
-            best_solution = rb.solution
+            rb.best_solution = rb.solution
             attempts = max_chains*(attempts+chains_without_improvement)/(max_chains-chains_without_improvement+1)
             chains_without_improvement = 0
 
      
         temperature = temperature * alpha
+    
+
+    print("BS",rb.best_solution)
 
 
 if __name__ == "__main__":
