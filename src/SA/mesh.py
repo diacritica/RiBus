@@ -15,9 +15,19 @@ class Mesh:
             file_contents = mesh_file.read()
             meshattrdata = json.loads(file_contents)
 
-        
-
         nx.set_node_attributes(self.graph, meshattrdata)
+
+    def removeClusterFromNode(self, cluster_id, node_id):
+        n_schools = self.graph.nodes[node_id]["schools"]
+
+        cluster_to_be_deleted = None
+
+        for s, cs in n_schools.items():
+            for c in cs:
+                if cluster_id == c["id"]:
+                    print("we delete!",c,"from",node_id)
+                    cs.remove(c)
+                    
 
 
 if __name__ == "__main__":
@@ -25,4 +35,6 @@ if __name__ == "__main__":
     dotfile = "../../utils/data/mesh_full_epsg3857.dot"
     jsonattrfile = "../../utils/data/students_epsg3857.json"
     m = Mesh(dotfile, jsonattrfile)
-    print(m.graph.nodes["node_646"])
+    print(m.graph.nodes["node_468"])
+    m.removeClusterFromNode("cluster_10143","node_468")
+    print(m.graph.nodes["node_468"])

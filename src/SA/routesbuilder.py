@@ -8,6 +8,8 @@ import networkx as nx
 import pygraphviz as pgv
 
 import routescost
+from mesh import Mesh
+
 
 
 class Routesbuilder:
@@ -15,7 +17,7 @@ class Routesbuilder:
     def __init__(self):
         self.G = nx.Graph()
 
-    def init(self, buses, avg_length_of_routes, delta_length, list_of_schools, bus_grid_filename, child_grid_filename):
+    def init(self, buses, avg_length_of_routes, delta_length, list_of_schools, bus_grid_filename, child_grid_filename, json_attr_filename):
 
         # list of schools comes as [{"id":"name of the school", "node": node_id}, {},{},]
 
@@ -36,24 +38,65 @@ class Routesbuilder:
             self.routes.append(self.getFreshRoute(bus))
 
         self.solution = {"solution":self.routes, "cost":10000}
-        print(self.solution)
+
+        # We generate the global mesh with nodes and student data
+        self.m = Mesh(child_grid_filename, json_attr_filename)
 
 
+    def traverseRoute(self, route):
+        dest_schools = set([s["id"] for s in route["schools"]])
+     
+        for c in route["path"]:
+           # we first go for 0cell
+
+            mesh_node = self.m.graph.nodes[c["node_id"]]
+            mesh_node_schools = set(mesh_node["schools"])
+            #print(">>>>>mesh_node_schools",mesh_node_schools)
+            school_intersection = dest_schools.intersection(mesh_node_schools)
+            #print(">>> school intersection", school_intersection)
+            if school_intersection:
+                # there's a 0cell cluster
+                for school in school_intersection:
+                    for mns in mesh_node_schools:
+                        if school == mns:
+                            potential_clusters = mesh_node["schools"][school] 
+                            for pc in potential_clusters:
+                                if route["bus_available_capacity"] >= pc["count"]:
+                                    route["path"][route["node_index"][c["node_id"]]]["0cell"].append(pc)
+                                    route["bus_available_capacity"] -= pc["count"]
+
+                                    self.m.removeClusterFromNode(pc["id"],c["node_id"])
+                        else:
+                            pass
+
+    def traverseAllRoutes(self):
+        for r in self.routes:
+            self.traverseRoute(r)
 
     def getFreshRoute(self, bus):
 
         school = self.list_of_schools[random.choice(list(self.list_of_schools))]
-        route = {"id":bus["id"], "bus_capacity":bus["capacity"], "schools":[school]}
+        route = {"id":bus["id"], "bus_capacity":bus["capacity"], "bus_available_capacity":bus["capacity"], "schools":[school], "cost":0}
         length = self.avg_length_of_routes - random.choice(range(self.delta_length))
-
+        connected_nodes = []
+        print("LENGTH", length)
 
         # we take the last tuple, and then the second node, which has to be, by definition, a school node
+        #simple_paths_for_bus = list(nx.dfs_edges(self.bus_grid, school["node"], depth_limit=length))
+        #print(">>>>>>dfsedges",school["node"],list(nx.dfs_edges(self.bus_grid, school["node"], depth_limit=length)))
         last_node = list(nx.dfs_edges(self.bus_grid, school["node"], depth_limit=length))[-1][-1]
 
         # we also need to make sure the path goes through 1 other school TBD. For now we pick one random
-        connected_nodes = random.choice(list(nx.all_shortest_paths(self.bus_grid, school["node"], last_node)))
+        for path in nx.all_simple_paths(self.bus_grid, source=school["node"], target=last_node, cutoff=length):
+            if len(path) >= int(length*0.9):
+                connected_nodes = path
+                print("CONNECTED NODES to", school["id"], school["node"], connected_nodes)
+                break
+        #connected_nodes = random.choice(list(nx.all_simple_paths(self.bus_grid, school["node"], last_node)))
+        connected_nodes_length = len(connected_nodes)
 
         path = []
+        node_index = {}
 
         for index, node in enumerate(connected_nodes):
             if index == 0:
@@ -66,7 +109,12 @@ class Routesbuilder:
                     "1cell": [], 
                     "2cell":[], 
                     "payload": 0, "time": 0})      
+            # we create a reverse index to acount for the following path reverse
+            node_index[node] = connected_nodes_length - index -1
+
         route["path"] = path
+        route["path"].reverse()
+        route["node_index"] = node_index
 
         return route
     
@@ -86,76 +134,6 @@ class Routesbuilder:
 
         return self.temp_copy
 
-    def initialize(self, letters, language, start, end):
-
-        self.start = start
-        self.end = end
-        self.solution = {"solution":[], "cost":2000}
-        self.temp_copy = {}
-        self.best_solution = {"solution":[], "cost":2000}
-
-        self.allwords = []
-
-        if len(start) == len(end):
-            letters = int(len(start))
-        numletter = int(letters)
-        wordpattern = "^"+"."*numletter+"$"
-        wordsregex = re.compile(wordpattern)
-
-        if language in ["es","en"]:
-            with open('words_{}.txt'.format(language), "r") as wordsfile:
-                allwords = list(filter(wordsregex.match, [i.strip() for i in wordsfile.readlines()]))
-
-        self.allwords = allwords
-        self.G.add_nodes_from(allwords)
-
-        click.secho("Number of nodes/words "+str(self.G.number_of_nodes()),fg='white')
-
-        click.secho("Creating edges between words. This might take a while...", blink=True, bold=True)
-        for w in allwords:
-            replacelist = []
-            for i in range(numletter):
-                replacelist.append(w.replace(w[i],".",3))
-                #print(w, replacelist[i])
-
-            r = re.compile("|".join(replacelist))
-            listofnearbywords = list(filter(r.match, allwords))
-
-            self.G.add_edges_from([(w,j) for j in listofnearbywords])
-
-        click.echo("Number of edges "+str(self.G.number_of_edges()))
-        self.createFirstSolution()
-
-    def createFirstSolution(self):
-        self.solution["solution"] = list(nx.all_shortest_paths(self.G,self.start,self.end))
-        self.solution["cost"] = routescost.route_total_cost(self.solution["solution"])
-        print("createFirstSolution finished", len(self.solution["solution"]), self.solution["cost"])
-        print("FS",self.solution["solution"])
-
-    def generateNeighbour(self):
-
-        self.temp_copy = copy.copy(self.solution)
-
-        random_route = random.choice(self.temp_copy["solution"])
-        random_pos = random.randint(0, len(random_route)-3)
-        random_cell_init = random_route[random_pos]
-        random_cell_inter = random_route[random_pos+1]
-        random_cell_final = random_route[random_pos+2]
-
-#        self.G.remove_edge(random_cell_init, random_cell_inter)
-#        self.G.remove_edge(random_cell_inter, random_cell_final)
-
-        newnode = random.choice(self.allwords)
-
-        self.G.add_edge(random_cell_init, newnode)
-        self.G.add_edge(newnode, random_cell_final)
-        random_route[random_pos+1] = newnode
-
-        self.temp_copy["cost"] = routescost.route_total_cost(self.temp_copy["solution"])
-#        print("generateNeighbour finished", len(self.temp_copy["solution"]), self.temp_copy["cost"])
-#        print("NS",self.temp_copy["solution"])
-
-        return self.temp_copy
 
     def acceptNeighbour(self):
 
@@ -175,8 +153,8 @@ if __name__=="__main__":
     buses = [{"id":"A","capacity":55},{"id":"B","capacity":55},{"id":"C","capacity":55},{"id":"D","capacity":60},
              {"id":"E","capacity":55},{"id":"F","capacity":55},{"id":"G","capacity":55},{"id":"H","capacity":60},
              {"id":"I","capacity":55}]
-    avg_length_of_routes = 30
-    delta_length = 5
+    avg_length_of_routes = 18
+    delta_length = 2
  
     with open('../../utils/data/schools_epsg3857.json') as schools_file:
         file_contents = schools_file.read()
@@ -186,9 +164,16 @@ if __name__=="__main__":
 
     bus_grid_filename = "../../utils/data/mesh_roads_epsg3857.dot"
     child_grid_filename = "../../utils/data/mesh_full_epsg3857.dot"
+    jsonattrfile = "../../utils/data/students_epsg3857.json"
  
 
     rb = Routesbuilder()
-    rb.init(buses,30,5,list_of_schools,bus_grid_filename,child_grid_filename)
+    rb.init(buses,avg_length_of_routes,delta_length,list_of_schools,bus_grid_filename,child_grid_filename, jsonattrfile)
+    
+    rb.traverseAllRoutes()
+    with open("out.json","w") as f:
+        f.write(json.dumps(rb.solution))
+    f.close()
+
 #    rb.generateNeighbour()
 

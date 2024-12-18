@@ -35,7 +35,7 @@ def markov_chain(temperature):
         # we might want to remove the attempts condition
 
         current = rb.solution
-        n = rb.generateNeighbour()
+        n = rb.getNeighbourSolution()
         attempts += 1
 
         if not accept_neighbour(current, n, temperature):
