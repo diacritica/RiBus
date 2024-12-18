@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "schools_epsg3857",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "name": "CEM HIPATIA" }, "geometry": { "type": "Point", "coordinates": [ -393715.320503154827747, 4921141.725073175504804 ] } },
+{ "type": "Feature", "properties": { "id": 2, "name": "CEIP RAFAEL ALBERTI" }, "geometry": { "type": "Point", "coordinates": [ -393750.375010805670172, 4920412.002500626258552 ] } },
+{ "type": "Feature", "properties": { "id": 3, "name": "CEIPSO LA LUNA" }, "geometry": { "type": "Point", "coordinates": [ -393999.897649418737274, 4920477.976035084575415 ] } },
+{ "type": "Feature", "properties": { "id": 4, "name": "CEIP JOSE HIERRO" }, "geometry": { "type": "Point", "coordinates": [ -392733.48259435815271, 4916459.204439152963459 ] } },
+{ "type": "Feature", "properties": { "id": 5, "name": "CEIP LAS CIGUENAS" }, "geometry": { "type": "Point", "coordinates": [ -391439.638416766072623, 4913952.214286997914314 ] } },
+{ "type": "Feature", "properties": { "id": 6, "name": "CEIP JOSE ITURZAETA" }, "geometry": { "type": "Point", "coordinates": [ -391656.433125086012296, 4916811.029450070112944 ] } },
+{ "type": "Feature", "properties": { "id": 7, "name": "CEIP HANS CHRISTIAN ANDERSEN" }, "geometry": { "type": "Point", "coordinates": [ -391434.395268749736715, 4917214.620506260544062 ] } },
+{ "type": "Feature", "properties": { "id": 8, "name": "CEIP JARAMA" }, "geometry": { "type": "Point", "coordinates": [ -393248.902968680136837, 4918505.258812854066491 ] } },
+{ "type": "Feature", "properties": { "id": 9, "name": "CEIP EL PARQUE" }, "geometry": { "type": "Point", "coordinates": [ -395371.209060653927736, 4918252.756626992486417 ] } },
+{ "type": "Feature", "properties": { "id": 10, "name": "CEIP EL OLIVAR" }, "geometry": { "type": "Point", "coordinates": [ -395423.273186497855932, 4919007.53593609854579 ] } },
+{ "type": "Feature", "properties": { "id": 11, "name": "CEIP DULCE CHACON" }, "geometry": { "type": "Point", "coordinates": [ -391217.03283102682326, 4915017.681282056495547 ] } },
+{ "type": "Feature", "properties": { "id": 12, "name": "CEIP JOSE SARAMAGO" }, "geometry": { "type": "Point", "coordinates": [ -393379.057717315619811, 4917623.355467528104782 ] } },
+{ "type": "Feature", "properties": { "id": 13, "name": "CEIP LA ESCUELA" }, "geometry": { "type": "Point", "coordinates": [ -394938.844158412772231, 4918036.694459790363908 ] } },
+{ "type": "Feature", "properties": { "id": 14, "name": "CEIP LOS ALMENDROS" }, "geometry": { "type": "Point", "coordinates": [ -393162.39659238466993, 4920100.069834747351706 ] } },
+{ "type": "Feature", "properties": { "id": 15, "name": "CEIP MARIO BENEDETTI" }, "geometry": { "type": "Point", "coordinates": [ -394989.149436302250251, 4920102.787586520425975 ] } },
+{ "type": "Feature", "properties": { "id": 16, "name": "CEIP VICTORIA KENT" }, "geometry": { "type": "Point", "coordinates": [ -393948.96898238081485, 4919392.384034223854542 ] } },
+{ "type": "Feature", "properties": { "id": 17, "name": "CEIP MERCEDES VERA " }, "geometry": { "type": "Point", "coordinates": [ -391775.845542859984562, 4915651.239054446108639 ] } }
+]
+}
