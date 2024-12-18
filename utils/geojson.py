@@ -292,6 +292,29 @@ def create_cluster_nodes_from(nodes, clusters):
 
     return cluster_nodes
 
+def create_schools_from(nodes, data):
+    schools = {}
+    for feature in data['features']:
+        geometry = feature['geometry']
+        if geometry['type'] != 'Point':
+            continue
+
+        school_id = feature['properties']['name']
+        x = feature['geometry']['coordinates'][0]
+        y = feature['geometry']['coordinates'][1]
+
+        [node, distance] = find_nearest_node(nodes, x, y)
+        if node is None:
+            raise ValueError(f'Node not found for feature {school_id}')
+
+        node_id = node['id']
+        schools[school_id] = {
+            'id': school_id,
+            'node': f'node_{int(node_id)}'
+        }
+
+    return schools
+
 #
 # Creates a graph from a geojson.
 #
