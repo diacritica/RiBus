@@ -17,7 +17,7 @@ class Routesbuilder:
 
     def init(self, buses, avg_length_of_routes, delta_length, list_of_schools, bus_grid_filename, child_grid_filename):
 
-        # list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
+        # list of schools comes as [{"id":"name of the school", "node": node_id}, {},{},]
 
         self.buses = buses
         self.avg_length_of_routes = avg_length_of_routes
@@ -35,6 +35,8 @@ class Routesbuilder:
         for bus in buses:
             self.routes.append(self.getFreshRoute(bus))
 
+        self.solution = ["solution":self.routes, "cost":10000}
+
 
 
     def getFreshRoute(self, bus):
@@ -44,6 +46,7 @@ class Routesbuilder:
         length = self.avg_length_of_routes - random.choice(range(self.delta_length))
 
 
+        # we take the last tuple, and then the second node, which has to be, by definition, a school node
         last_node = list(nx.dfs_edges(self.bus_grid, school["node"], depth_limit=length))[-1][-1]
 
         # we also need to make sure the path goes through 1 other school TBD. For now we pick one random
@@ -65,7 +68,22 @@ class Routesbuilder:
         route["path"] = path
 
         return route
-                    
+    
+    def getNeighbourSolution(self):
+
+        # self.solution is in the form {"solution":[], "cost": int}
+        self.temp_copy = copy.copy(self.solution)
+
+        # We take a random route and we keep the original bus
+        random_route = self.temp_copy["solution"].pop()
+        bus = {"id":random_route["id"],"bus_capacity":random_route["capacity"]}
+
+        # We generate a completely new bus route for said bus
+        self.temp_copy["solution"].append(self.getFreshRoute(bus))
+
+        self.temp_copy["cost"] = routescost.route_total_cost(self.temp_copy["solution"])
+
+        return self.temp_copy
 
     def initialize(self, letters, language, start, end):
 

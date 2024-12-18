@@ -4,10 +4,6 @@
 def route_total_cost(routes):
 
     total_cost = 0
-    total_cost += route_cost_by(routes, "a", 5)
-    total_cost += route_cost_by(routes, "e", 4)
-    total_cost += route_cost_by(routes, "r", 2)
-    total_cost += route_cost_by(routes, "l", 1)
 
     total_cost += route_cost_by_no_pickup(routes, 10)
     total_cost += route_cost_by_nonlocal_children(routes, 30)
@@ -16,13 +12,6 @@ def route_total_cost(routes):
 
     return total_cost
 
-def route_cost_by(routes, l, weight):
-
-    cost = 0
-    for r in routes:
-        for w in r:
-            cost += w.count(l) * weight
-    return cost
 
 
 def route_cost_by_no_pickup(routes, weight):
