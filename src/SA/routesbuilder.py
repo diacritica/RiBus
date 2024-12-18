@@ -35,7 +35,8 @@ class Routesbuilder:
         for bus in buses:
             self.routes.append(self.getFreshRoute(bus))
 
-        self.solution = ["solution":self.routes, "cost":10000}
+        self.solution = {"solution":self.routes, "cost":10000}
+        print(self.solution)
 
 
 
@@ -171,18 +172,20 @@ if __name__=="__main__":
 
     # list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
 
-    buses = [{"id":"A","capacity":55},{"id":"B","capacity":55},{"id":"C","capacity":55},{"id":"D","capacity":60}]
+    buses = [{"id":"A","capacity":55},{"id":"B","capacity":55},{"id":"C","capacity":55},{"id":"D","capacity":60},
+             {"id":"E","capacity":55},{"id":"F","capacity":55},{"id":"G","capacity":55},{"id":"H","capacity":60},
+             {"id":"I","capacity":55}]
     avg_length_of_routes = 30
     delta_length = 5
  
-    with open('../../utils/data/schools.json') as schools_file:
+    with open('../../utils/data/schools_epsg3857.json') as schools_file:
         file_contents = schools_file.read()
         list_of_schools = json.loads(file_contents)
 
-    print("list_of_schools",list_of_schools)
+    #print("list_of_schools",list_of_schools)
 
-    bus_grid_filename = "../../utils/data/malla_media_circulable_directed.dot"
-    child_grid_filename = "../../utils/data/malla_media_undirected.dot"
+    bus_grid_filename = "../../utils/data/mesh_roads_epsg3857.dot"
+    child_grid_filename = "../../utils/data/mesh_full_epsg3857.dot"
  
 
     rb = Routesbuilder()
