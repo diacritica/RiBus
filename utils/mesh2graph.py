@@ -9,7 +9,8 @@ input_file = Path(sys.argv[1])
 content = input_file.read_text(encoding='utf-8')
 data = json.loads(content)
 
-geojson.compute_feature_bounds(data)
+if sys.argv[2] != '--dont-compute-feature-bounds':
+    geojson.compute_feature_bounds(data)
 
 graph = geojson.create_graph_from(data)
 dot = geojson.create_digraph_dot(graph['bounds'], graph['nodes'])

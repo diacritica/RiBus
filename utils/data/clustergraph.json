@@ -1,0 +1,5769 @@
+{
+  "node_826": {
+    "count": 0,
+    "edges": [
+      "node_868",
+      "node_869",
+      "node_784",
+      "node_785",
+      "node_825",
+      "node_827"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10000",
+          "count": 1
+        },
+        {
+          "id": "cluster_10001",
+          "count": 3
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10005",
+          "count": 2
+        },
+        {
+          "id": "cluster_10186",
+          "count": 1
+        },
+        {
+          "id": "cluster_10346",
+          "count": 1
+        },
+        {
+          "id": "cluster_10398",
+          "count": 4
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10021",
+          "count": 1
+        },
+        {
+          "id": "cluster_10307",
+          "count": 6
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10027",
+          "count": 2
+        },
+        {
+          "id": "cluster_10033",
+          "count": 1
+        },
+        {
+          "id": "cluster_10040",
+          "count": 5
+        },
+        {
+          "id": "cluster_10064",
+          "count": 1
+        },
+        {
+          "id": "cluster_10294",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10124",
+          "count": 2
+        },
+        {
+          "id": "cluster_10407",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10126",
+          "count": 2
+        },
+        {
+          "id": "cluster_10152",
+          "count": 2
+        },
+        {
+          "id": "cluster_10549",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10157",
+          "count": 1
+        },
+        {
+          "id": "cluster_10369",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10416",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10417",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10488",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10572",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_610": {
+    "count": 0,
+    "edges": [
+      "node_609",
+      "node_611",
+      "node_651",
+      "node_652",
+      "node_567",
+      "node_568"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10002",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10125",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10129",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10302",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10348",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_739": {
+    "count": 0,
+    "edges": [
+      "node_738",
+      "node_740",
+      "node_781",
+      "node_782",
+      "node_697",
+      "node_698"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10003",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10095",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10165",
+          "count": 2
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10185",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10189",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10253",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10338",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_988": {
+    "count": 0,
+    "edges": [
+      "node_1030",
+      "node_1031",
+      "node_946",
+      "node_947",
+      "node_987",
+      "node_989"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10004",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10017",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10378",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10400",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10496",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10515",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_913": {
+    "count": 0,
+    "edges": [
+      "node_871",
+      "node_872",
+      "node_912",
+      "node_914",
+      "node_955",
+      "node_956"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10006",
+          "count": 3
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10025",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10092",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10093",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10365",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10451",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_946": {
+    "count": 0,
+    "edges": [
+      "node_903",
+      "node_904",
+      "node_945",
+      "node_947",
+      "node_987",
+      "node_988"
+    ],
+    "schools": {
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10007",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10283",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10516",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_386": {
+    "count": 0,
+    "edges": [
+      "node_385",
+      "node_387",
+      "node_428",
+      "node_429",
+      "node_344",
+      "node_345"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10008",
+          "count": 2
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10101",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10102",
+          "count": 1
+        },
+        {
+          "id": "cluster_10545",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10120",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10242",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10252",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10278",
+          "count": 2
+        },
+        {
+          "id": "cluster_10314",
+          "count": 2
+        },
+        {
+          "id": "cluster_10404",
+          "count": 2
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10474",
+          "count": 2
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10564",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10575",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_863": {
+    "count": 0,
+    "edges": [
+      "node_864",
+      "node_904",
+      "node_905",
+      "node_820",
+      "node_821",
+      "node_862"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10009",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10132",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10162",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10187",
+          "count": 5
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10281",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_827": {
+    "count": 0,
+    "edges": [
+      "node_869",
+      "node_870",
+      "node_785",
+      "node_786",
+      "node_826",
+      "node_828"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10010",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10063",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10270",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10306",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10317",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10413",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10432",
+          "count": 1
+        },
+        {
+          "id": "cluster_10434",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10535",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_954": {
+    "count": 0,
+    "edges": [
+      "node_995",
+      "node_996",
+      "node_911",
+      "node_912",
+      "node_953",
+      "node_955"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10011",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10103",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10264",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10375",
+          "count": 4
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10443",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10467",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_785": {
+    "count": 0,
+    "edges": [
+      "node_742",
+      "node_743",
+      "node_784",
+      "node_786",
+      "node_826",
+      "node_827"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10012",
+          "count": 3
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10181",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10245",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_996": {
+    "count": 0,
+    "edges": [
+      "node_995",
+      "node_997",
+      "node_1038",
+      "node_1039",
+      "node_954",
+      "node_955"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10013",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10279",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10337",
+          "count": 1
+        },
+        {
+          "id": "cluster_10355",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10345",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_550": {
+    "count": 0,
+    "edges": [
+      "node_549",
+      "node_551",
+      "node_592",
+      "node_593",
+      "node_508",
+      "node_509"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10014",
+          "count": 4
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10098",
+          "count": 2
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10240",
+          "count": 3
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10243",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10261",
+          "count": 5
+        },
+        {
+          "id": "cluster_10312",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10280",
+          "count": 1
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10550",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1086": {
+    "count": 0,
+    "edges": [
+      "node_1128",
+      "node_1129",
+      "node_1044",
+      "node_1045",
+      "node_1085",
+      "node_1087"
+    ],
+    "schools": {
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10015",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10043",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10128",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10160",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10376",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_903": {
+    "count": 0,
+    "edges": [
+      "node_902",
+      "node_904",
+      "node_945",
+      "node_946",
+      "node_861",
+      "node_862"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10016",
+          "count": 2
+        },
+        {
+          "id": "cluster_10075",
+          "count": 2
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10082",
+          "count": 3
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10293",
+          "count": 3
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10392",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_782": {
+    "count": 0,
+    "edges": [
+      "node_739",
+      "node_740",
+      "node_781",
+      "node_783",
+      "node_823",
+      "node_824"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10018",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_596": {
+    "count": 0,
+    "edges": [
+      "node_553",
+      "node_554",
+      "node_595",
+      "node_597",
+      "node_637",
+      "node_638"
+    ],
+    "schools": {
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10019",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10090",
+          "count": 2
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10291",
+          "count": 2
+        }
+      ],
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10310",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_527": {
+    "count": 0,
+    "edges": [
+      "node_484",
+      "node_485",
+      "node_526",
+      "node_528",
+      "node_568",
+      "node_569"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10020",
+          "count": 3
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10050",
+          "count": 3
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10377",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_438": {
+    "count": 0,
+    "edges": [
+      "node_480",
+      "node_395",
+      "node_396",
+      "node_437",
+      "node_439",
+      "node_479"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10022",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10562",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_635": {
+    "count": 0,
+    "edges": [
+      "node_677",
+      "node_678",
+      "node_593",
+      "node_594",
+      "node_634",
+      "node_636"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10023",
+          "count": 1
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10156",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10233",
+          "count": 2
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10411",
+          "count": 4
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10497",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_823": {
+    "count": 0,
+    "edges": [
+      "node_865",
+      "node_866",
+      "node_781",
+      "node_782",
+      "node_822",
+      "node_824"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10024",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10203",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10224",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10494",
+          "count": 6
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10498",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_605": {
+    "count": 0,
+    "edges": [
+      "node_646",
+      "node_647",
+      "node_562",
+      "node_563",
+      "node_604",
+      "node_606"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10026",
+          "count": 2
+        },
+        {
+          "id": "cluster_10078",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_861": {
+    "count": 0,
+    "edges": [
+      "node_902",
+      "node_903",
+      "node_818",
+      "node_819",
+      "node_860",
+      "node_862"
+    ],
+    "schools": {
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10028",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_429": {
+    "count": 0,
+    "edges": [
+      "node_386",
+      "node_387",
+      "node_428",
+      "node_430",
+      "node_470",
+      "node_471"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10029",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10049",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10135",
+          "count": 2
+        },
+        {
+          "id": "cluster_10271",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10158",
+          "count": 1
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10175",
+          "count": 1
+        }
+      ],
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10222",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10292",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10476",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_609": {
+    "count": 0,
+    "edges": [
+      "node_608",
+      "node_610",
+      "node_650",
+      "node_651",
+      "node_566",
+      "node_567"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10030",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_509": {
+    "count": 0,
+    "edges": [
+      "node_550",
+      "node_551",
+      "node_466",
+      "node_467",
+      "node_508",
+      "node_510"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10031",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10289",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10359",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_699": {
+    "count": 0,
+    "edges": [
+      "node_740",
+      "node_741",
+      "node_656",
+      "node_657",
+      "node_698",
+      "node_700"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10032",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1170": {
+    "count": 0,
+    "edges": [
+      "node_1128",
+      "node_1129",
+      "node_1169",
+      "node_1171",
+      "node_1212",
+      "node_1213"
+    ],
+    "schools": {
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10034",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10149",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10323",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10344",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_741": {
+    "count": 0,
+    "edges": [
+      "node_740",
+      "node_742",
+      "node_783",
+      "node_784",
+      "node_699",
+      "node_700"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10035",
+          "count": 1
+        },
+        {
+          "id": "cluster_10255",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10200",
+          "count": 2
+        }
+      ],
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10431",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10464",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10499",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_902": {
+    "count": 0,
+    "edges": [
+      "node_901",
+      "node_903",
+      "node_944",
+      "node_945",
+      "node_860",
+      "node_861"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10036",
+          "count": 5
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10159",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10330",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10458",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10565",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_681": {
+    "count": 0,
+    "edges": [
+      "node_680",
+      "node_682",
+      "node_722",
+      "node_723",
+      "node_638",
+      "node_639"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10037",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10096",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_698": {
+    "count": 0,
+    "edges": [
+      "node_739",
+      "node_740",
+      "node_655",
+      "node_656",
+      "node_697",
+      "node_699"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10038",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10191",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10284",
+          "count": 1
+        },
+        {
+          "id": "cluster_10379",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10395",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_872": {
+    "count": 0,
+    "edges": [
+      "node_871",
+      "node_873",
+      "node_913",
+      "node_914",
+      "node_829",
+      "node_830"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10039",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10119",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10327",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10471",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10487",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_265": {
+    "count": 0,
+    "edges": [
+      "node_264",
+      "node_266",
+      "node_306",
+      "node_307",
+      "node_222",
+      "node_223"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10041",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10520",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10569",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_867": {
+    "count": 0,
+    "edges": [
+      "node_866",
+      "node_868",
+      "node_908",
+      "node_909",
+      "node_824",
+      "node_825"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10042",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_822": {
+    "count": 0,
+    "edges": [
+      "node_864",
+      "node_865",
+      "node_780",
+      "node_781",
+      "node_821",
+      "node_823"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10044",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_387": {
+    "count": 0,
+    "edges": [
+      "node_386",
+      "node_388",
+      "node_429",
+      "node_430",
+      "node_345",
+      "node_346"
+    ],
+    "schools": {
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10045",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10237",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10263",
+          "count": 1
+        },
+        {
+          "id": "cluster_10266",
+          "count": 1
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10321",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10371",
+          "count": 1
+        }
+      ],
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10396",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10461",
+          "count": 4
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10552",
+          "count": 2
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10576",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_870": {
+    "count": 0,
+    "edges": [
+      "node_869",
+      "node_871",
+      "node_911",
+      "node_912",
+      "node_827",
+      "node_828"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10046",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10111",
+          "count": 2
+        },
+        {
+          "id": "cluster_10440",
+          "count": 1
+        },
+        {
+          "id": "cluster_10463",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10121",
+          "count": 7
+        },
+        {
+          "id": "cluster_10551",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10238",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10354",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10388",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10563",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_737": {
+    "count": 0,
+    "edges": [
+      "node_736",
+      "node_738",
+      "node_779",
+      "node_780",
+      "node_695",
+      "node_696"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10047",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_808": {
+    "count": 0,
+    "edges": [
+      "node_809",
+      "node_807",
+      "node_766",
+      "node_767"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10048",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_268": {
+    "count": 0,
+    "edges": [
+      "node_225",
+      "node_226",
+      "node_267",
+      "node_269",
+      "node_309",
+      "node_310"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10051",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10276",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1171": {
+    "count": 0,
+    "edges": [
+      "node_1129",
+      "node_1130",
+      "node_1170",
+      "node_1172",
+      "node_1213",
+      "node_1214"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10052",
+          "count": 1
+        },
+        {
+          "id": "cluster_10192",
+          "count": 1
+        },
+        {
+          "id": "cluster_10559",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10139",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10251",
+          "count": 2
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10269",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10299",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10357",
+          "count": 2
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10477",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10560",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_942": {
+    "count": 0,
+    "edges": [
+      "node_899",
+      "node_900",
+      "node_941",
+      "node_943"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10053",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10557",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_353": {
+    "count": 0,
+    "edges": [
+      "node_352",
+      "node_354",
+      "node_394",
+      "node_395",
+      "node_310",
+      "node_311"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10054",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_223": {
+    "count": 0,
+    "edges": [
+      "node_224",
+      "node_265",
+      "node_266",
+      "node_181",
+      "node_182",
+      "node_222"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10055",
+          "count": 2
+        }
+      ],
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10110",
+          "count": 4
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10447",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10454",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_911": {
+    "count": 0,
+    "edges": [
+      "node_869",
+      "node_870",
+      "node_910",
+      "node_912",
+      "node_953",
+      "node_954"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10056",
+          "count": 3
+        },
+        {
+          "id": "cluster_10469",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10087",
+          "count": 3
+        },
+        {
+          "id": "cluster_10099",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10204",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10234",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_443": {
+    "count": 0,
+    "edges": [
+      "node_484",
+      "node_485",
+      "node_400",
+      "node_401",
+      "node_442",
+      "node_444"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10057",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10184",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10510",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1030": {
+    "count": 0,
+    "edges": [
+      "node_1029",
+      "node_1031",
+      "node_1071",
+      "node_1072",
+      "node_987",
+      "node_988"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10058",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10112",
+          "count": 3
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10220",
+          "count": 2
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10373",
+          "count": 3
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10402",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10424",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10437",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10539",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1031": {
+    "count": 0,
+    "edges": [
+      "node_1072",
+      "node_988",
+      "node_989",
+      "node_1030"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10059",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10107",
+          "count": 1
+        },
+        {
+          "id": "cluster_10509",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10122",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10328",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_869": {
+    "count": 0,
+    "edges": [
+      "node_868",
+      "node_870",
+      "node_910",
+      "node_911",
+      "node_826",
+      "node_827"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10060",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10068",
+          "count": 2
+        },
+        {
+          "id": "cluster_10418",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10074",
+          "count": 2
+        },
+        {
+          "id": "cluster_10272",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10146",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_955": {
+    "count": 0,
+    "edges": [
+      "node_996",
+      "node_997",
+      "node_912",
+      "node_913",
+      "node_954",
+      "node_956"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10061",
+          "count": 4
+        },
+        {
+          "id": "cluster_10341",
+          "count": 1
+        },
+        {
+          "id": "cluster_10537",
+          "count": 2
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10235",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10268",
+          "count": 2
+        },
+        {
+          "id": "cluster_10401",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10353",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10366",
+          "count": 4
+        },
+        {
+          "id": "cluster_10410",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10448",
+          "count": 2
+        },
+        {
+          "id": "cluster_10541",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1131": {
+    "count": 0,
+    "edges": [
+      "node_1088",
+      "node_1089",
+      "node_1130",
+      "node_1132",
+      "node_1172",
+      "node_1173"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10062",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10094",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_469": {
+    "count": 0,
+    "edges": [
+      "node_512",
+      "node_427",
+      "node_428",
+      "node_468",
+      "node_470",
+      "node_511"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10065",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_957": {
+    "count": 0,
+    "edges": [
+      "node_998",
+      "node_999",
+      "node_914",
+      "node_915",
+      "node_956",
+      "node_958"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10066",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10356",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10368",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10526",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_436": {
+    "count": 0,
+    "edges": [
+      "node_393",
+      "node_394",
+      "node_435",
+      "node_437",
+      "node_477",
+      "node_478"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10067",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_272": {
+    "count": 0,
+    "edges": [
+      "node_229",
+      "node_230",
+      "node_271",
+      "node_273",
+      "node_313",
+      "node_314"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10069",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10267",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_828": {
+    "count": 0,
+    "edges": [
+      "node_870",
+      "node_871",
+      "node_786",
+      "node_787",
+      "node_827",
+      "node_829"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10070",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10221",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10230",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10347",
+          "count": 1
+        },
+        {
+          "id": "cluster_10349",
+          "count": 1
+        },
+        {
+          "id": "cluster_10350",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10425",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10436",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10479",
+          "count": 1
+        },
+        {
+          "id": "cluster_10480",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1045": {
+    "count": 0,
+    "edges": [
+      "node_1002",
+      "node_1003",
+      "node_1044",
+      "node_1046",
+      "node_1086",
+      "node_1087"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10071",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10136",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_597": {
+    "count": 0,
+    "edges": [
+      "node_554",
+      "node_555",
+      "node_596",
+      "node_598",
+      "node_638",
+      "node_639"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10072",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_784": {
+    "count": 0,
+    "edges": [
+      "node_741",
+      "node_742",
+      "node_783",
+      "node_785",
+      "node_825",
+      "node_826"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10073",
+          "count": 3
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10211",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10216",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_864": {
+    "count": 0,
+    "edges": [
+      "node_865",
+      "node_905",
+      "node_906",
+      "node_821",
+      "node_822",
+      "node_863"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10076",
+          "count": 1
+        }
+      ],
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10468",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_599": {
+    "count": 0,
+    "edges": [
+      "node_640",
+      "node_641",
+      "node_556",
+      "node_557",
+      "node_598",
+      "node_600"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10077",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_613": {
+    "count": 0,
+    "edges": [
+      "node_612",
+      "node_614",
+      "node_654",
+      "node_655",
+      "node_570",
+      "node_571"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10079",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_313": {
+    "count": 0,
+    "edges": [
+      "node_355",
+      "node_356",
+      "node_271",
+      "node_272",
+      "node_312",
+      "node_314"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10080",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10336",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10445",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_228": {
+    "count": 0,
+    "edges": [
+      "node_227",
+      "node_229",
+      "node_270",
+      "node_271",
+      "node_186",
+      "node_187"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10081",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10161",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10485",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_263": {
+    "count": 0,
+    "edges": [
+      "node_262",
+      "node_264",
+      "node_304",
+      "node_305",
+      "node_220",
+      "node_221"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10083",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10213",
+          "count": 2
+        },
+        {
+          "id": "cluster_10507",
+          "count": 2
+        },
+        {
+          "id": "cluster_10553",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10217",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10223",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10273",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10316",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10343",
+          "count": 5
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10419",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_553": {
+    "count": 0,
+    "edges": [
+      "node_512",
+      "node_552",
+      "node_554",
+      "node_595",
+      "node_596",
+      "node_511"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10084",
+          "count": 2
+        },
+        {
+          "id": "cluster_10442",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10173",
+          "count": 1
+        },
+        {
+          "id": "cluster_10571",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10290",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10329",
+          "count": 2
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10412",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10521",
+          "count": 1
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10543",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_945": {
+    "count": 0,
+    "edges": [
+      "node_902",
+      "node_903",
+      "node_944",
+      "node_946",
+      "node_986",
+      "node_987"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10085",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10320",
+          "count": 1
+        },
+        {
+          "id": "cluster_10429",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_262": {
+    "count": 0,
+    "edges": [
+      "node_261",
+      "node_263",
+      "node_303",
+      "node_304",
+      "node_219",
+      "node_220"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10086",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10399",
+          "count": 1
+        },
+        {
+          "id": "cluster_10452",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_868": {
+    "count": 0,
+    "edges": [
+      "node_867",
+      "node_869",
+      "node_909",
+      "node_910",
+      "node_825",
+      "node_826"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10088",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10166",
+          "count": 2
+        },
+        {
+          "id": "cluster_10491",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10257",
+          "count": 3
+        },
+        {
+          "id": "cluster_10326",
+          "count": 2
+        },
+        {
+          "id": "cluster_10555",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10362",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10536",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_909": {
+    "count": 0,
+    "edges": [
+      "node_867",
+      "node_868",
+      "node_908",
+      "node_910",
+      "node_951",
+      "node_952"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10089",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10449",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10548",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_399": {
+    "count": 0,
+    "edges": [
+      "node_357",
+      "node_358",
+      "node_398",
+      "node_400",
+      "node_441",
+      "node_442"
+    ],
+    "schools": {
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10091",
+          "count": 2
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10117",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10199",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10446",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_512": {
+    "count": 0,
+    "edges": [
+      "node_513",
+      "node_553",
+      "node_554",
+      "node_469",
+      "node_470",
+      "node_511"
+    ],
+    "schools": {
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10097",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10153",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10172",
+          "count": 1
+        },
+        {
+          "id": "cluster_10296",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10544",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_953": {
+    "count": 0,
+    "edges": [
+      "node_995",
+      "node_910",
+      "node_911",
+      "node_952",
+      "node_954"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10100",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_310": {
+    "count": 0,
+    "edges": [
+      "node_352",
+      "node_353",
+      "node_268",
+      "node_269",
+      "node_309",
+      "node_311"
+    ],
+    "schools": {
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10104",
+          "count": 1
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10170",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_431": {
+    "count": 0,
+    "edges": [
+      "node_388",
+      "node_389",
+      "node_430",
+      "node_432",
+      "node_472",
+      "node_473"
+    ],
+    "schools": {
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10105",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10229",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_302": {
+    "count": 0,
+    "edges": [
+      "node_260",
+      "node_261",
+      "node_301",
+      "node_303",
+      "node_344",
+      "node_345"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10106",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10137",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10169",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_680": {
+    "count": 0,
+    "edges": [
+      "node_679",
+      "node_681",
+      "node_721",
+      "node_722",
+      "node_637",
+      "node_638"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10108",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_437": {
+    "count": 0,
+    "edges": [
+      "node_394",
+      "node_395",
+      "node_436",
+      "node_438",
+      "node_478",
+      "node_479"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10109",
+          "count": 3
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10580",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1088": {
+    "count": 0,
+    "edges": [
+      "node_1089",
+      "node_1130",
+      "node_1131",
+      "node_1046",
+      "node_1047",
+      "node_1087"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10113",
+          "count": 1
+        },
+        {
+          "id": "cluster_10382",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10208",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10503",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_183": {
+    "count": 0,
+    "edges": [
+      "node_224",
+      "node_225",
+      "node_140",
+      "node_141",
+      "node_182",
+      "node_184"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10114",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10566",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1048": {
+    "count": 0,
+    "edges": [
+      "node_1089",
+      "node_1090",
+      "node_1005",
+      "node_1006",
+      "node_1047",
+      "node_1049"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10115",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_906": {
+    "count": 0,
+    "edges": [
+      "node_864",
+      "node_865",
+      "node_905",
+      "node_907",
+      "node_948",
+      "node_949"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10116",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_636": {
+    "count": 0,
+    "edges": [
+      "node_678",
+      "node_679",
+      "node_594",
+      "node_595",
+      "node_635",
+      "node_637"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10118",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10177",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10226",
+          "count": 2
+        },
+        {
+          "id": "cluster_10259",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10340",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10420",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_914": {
+    "count": 0,
+    "edges": [
+      "node_872",
+      "node_873",
+      "node_913",
+      "node_915",
+      "node_956",
+      "node_957"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10123",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10285",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10534",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_522": {
+    "count": 0,
+    "edges": [
+      "node_480",
+      "node_521",
+      "node_523",
+      "node_563",
+      "node_564",
+      "node_479"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10127",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_905": {
+    "count": 0,
+    "edges": [
+      "node_864",
+      "node_904",
+      "node_906",
+      "node_947",
+      "node_948",
+      "node_863"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10130",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10215",
+          "count": 2
+        },
+        {
+          "id": "cluster_10390",
+          "count": 2
+        },
+        {
+          "id": "cluster_10478",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_304": {
+    "count": 0,
+    "edges": [
+      "node_262",
+      "node_263",
+      "node_303",
+      "node_305",
+      "node_346",
+      "node_347"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10131",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10462",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10531",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_442": {
+    "count": 0,
+    "edges": [
+      "node_483",
+      "node_484",
+      "node_399",
+      "node_400",
+      "node_441",
+      "node_443"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10133",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10247",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10265",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10475",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_267": {
+    "count": 0,
+    "edges": [
+      "node_224",
+      "node_225",
+      "node_266",
+      "node_268",
+      "node_308",
+      "node_309"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10134",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10236",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10433",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10492",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1087": {
+    "count": 0,
+    "edges": [
+      "node_1088",
+      "node_1129",
+      "node_1130",
+      "node_1045",
+      "node_1046",
+      "node_1086"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10138",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10197",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10470",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_866": {
+    "count": 0,
+    "edges": [
+      "node_865",
+      "node_867",
+      "node_907",
+      "node_908",
+      "node_823",
+      "node_824"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10140",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10578",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_655": {
+    "count": 0,
+    "edges": [
+      "node_613",
+      "node_614",
+      "node_654",
+      "node_656",
+      "node_697",
+      "node_698"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10141",
+          "count": 1
+        },
+        {
+          "id": "cluster_10504",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10154",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10193",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10225",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10239",
+          "count": 1
+        },
+        {
+          "id": "cluster_10303",
+          "count": 1
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10489",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_912": {
+    "count": 0,
+    "edges": [
+      "node_870",
+      "node_871",
+      "node_911",
+      "node_913",
+      "node_954",
+      "node_955"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10142",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10207",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_468": {
+    "count": 0,
+    "edges": [
+      "node_426",
+      "node_427",
+      "node_467",
+      "node_469",
+      "node_510",
+      "node_511"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10143",
+          "count": 3
+        },
+        {
+          "id": "cluster_10201",
+          "count": 2
+        },
+        {
+          "id": "cluster_10333",
+          "count": 2
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10144",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10297",
+          "count": 3
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10486",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10523",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10524",
+          "count": 1
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10577",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_346": {
+    "count": 0,
+    "edges": [
+      "node_387",
+      "node_388",
+      "node_303",
+      "node_304",
+      "node_345",
+      "node_347"
+    ],
+    "schools": {
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10145",
+          "count": 2
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10427",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_824": {
+    "count": 0,
+    "edges": [
+      "node_866",
+      "node_867",
+      "node_782",
+      "node_783",
+      "node_823",
+      "node_825"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10147",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10171",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10205",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10282",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10334",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10568",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_598": {
+    "count": 0,
+    "edges": [
+      "node_640",
+      "node_555",
+      "node_556",
+      "node_597",
+      "node_599",
+      "node_639"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10148",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10438",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10473",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10500",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10512",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10522",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10530",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_646": {
+    "count": 0,
+    "edges": [
+      "node_645",
+      "node_647",
+      "node_688",
+      "node_689",
+      "node_604",
+      "node_605"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10150",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_790": {
+    "count": 0,
+    "edges": [
+      "node_832",
+      "node_747",
+      "node_748",
+      "node_789",
+      "node_791",
+      "node_831"
+    ],
+    "schools": {
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10151",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10527",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_229": {
+    "count": 0,
+    "edges": [
+      "node_228",
+      "node_230",
+      "node_271",
+      "node_272",
+      "node_187",
+      "node_188"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10155",
+          "count": 1
+        },
+        {
+          "id": "cluster_10428",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_943": {
+    "count": 0,
+    "edges": [
+      "node_900",
+      "node_901",
+      "node_942",
+      "node_944",
+      "node_985"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10163",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_740": {
+    "count": 0,
+    "edges": [
+      "node_739",
+      "node_741",
+      "node_782",
+      "node_783",
+      "node_698",
+      "node_699"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10164",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1002": {
+    "count": 0,
+    "edges": [
+      "node_960",
+      "node_961",
+      "node_1001",
+      "node_1003",
+      "node_1044",
+      "node_1045"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10167",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_269": {
+    "count": 0,
+    "edges": [
+      "node_226",
+      "node_227",
+      "node_268",
+      "node_270",
+      "node_310",
+      "node_311"
+    ],
+    "schools": {
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10168",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10195",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10196",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_231": {
+    "count": 0,
+    "edges": [
+      "node_230",
+      "node_232",
+      "node_273",
+      "node_274",
+      "node_189",
+      "node_190"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10174",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10532",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_482": {
+    "count": 0,
+    "edges": [
+      "node_481",
+      "node_483",
+      "node_524",
+      "node_525",
+      "node_440",
+      "node_441"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10176",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_986": {
+    "count": 0,
+    "edges": [
+      "node_1028",
+      "node_1029",
+      "node_944",
+      "node_945",
+      "node_985",
+      "node_987"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10178",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10179",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_639": {
+    "count": 0,
+    "edges": [
+      "node_640",
+      "node_681",
+      "node_682",
+      "node_597",
+      "node_598",
+      "node_638"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10180",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_686": {
+    "count": 0,
+    "edges": [
+      "node_643",
+      "node_644",
+      "node_685",
+      "node_687",
+      "node_727"
+    ],
+    "schools": {
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10182",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_948": {
+    "count": 0,
+    "edges": [
+      "node_905",
+      "node_906",
+      "node_947",
+      "node_949",
+      "node_989"
+    ],
+    "schools": {
+      "CEIP MERCEDES VERA": [
+        {
+          "id": "cluster_10183",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10370",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10380",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10383",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10481",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_684": {
+    "count": 0,
+    "edges": [
+      "node_641",
+      "node_642",
+      "node_683",
+      "node_685",
+      "node_725",
+      "node_726"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10188",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10519",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_226": {
+    "count": 0,
+    "edges": [
+      "node_225",
+      "node_227",
+      "node_268",
+      "node_269",
+      "node_184",
+      "node_185"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10190",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10342",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_603": {
+    "count": 0,
+    "edges": [
+      "node_644",
+      "node_645",
+      "node_560",
+      "node_561",
+      "node_602",
+      "node_604"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10194",
+          "count": 3
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10218",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_529": {
+    "count": 0,
+    "edges": [
+      "node_486",
+      "node_487",
+      "node_528",
+      "node_530",
+      "node_570",
+      "node_571"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10198",
+          "count": 3
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10231",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10295",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_819": {
+    "count": 0,
+    "edges": [
+      "node_777",
+      "node_778",
+      "node_818",
+      "node_820",
+      "node_861",
+      "node_862"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10202",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_521": {
+    "count": 0,
+    "edges": [
+      "node_520",
+      "node_522",
+      "node_562",
+      "node_563",
+      "node_478",
+      "node_479"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10206",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_528": {
+    "count": 0,
+    "edges": [
+      "node_485",
+      "node_486",
+      "node_527",
+      "node_529",
+      "node_569",
+      "node_570"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10209",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10228",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10372",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10453",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_467": {
+    "count": 0,
+    "edges": [
+      "node_425",
+      "node_426",
+      "node_466",
+      "node_468",
+      "node_509",
+      "node_510"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10210",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10254",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10300",
+          "count": 4
+        },
+        {
+          "id": "cluster_10374",
+          "count": 2
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10308",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10318",
+          "count": 2
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10391",
+          "count": 2
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10493",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_227": {
+    "count": 0,
+    "edges": [
+      "node_226",
+      "node_228",
+      "node_269",
+      "node_270",
+      "node_185",
+      "node_186"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10212",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10360",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10385",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10567",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_724": {
+    "count": 0,
+    "edges": [
+      "node_682",
+      "node_683",
+      "node_723",
+      "node_725",
+      "node_766",
+      "node_767"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10214",
+          "count": 2
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10244",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_595": {
+    "count": 0,
+    "edges": [
+      "node_552",
+      "node_553",
+      "node_594",
+      "node_596",
+      "node_636",
+      "node_637"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10219",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10335",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1130": {
+    "count": 0,
+    "edges": [
+      "node_1088",
+      "node_1129",
+      "node_1131",
+      "node_1171",
+      "node_1172",
+      "node_1087"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10227",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_525": {
+    "count": 0,
+    "edges": [
+      "node_482",
+      "node_483",
+      "node_524",
+      "node_526",
+      "node_566",
+      "node_567"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10232",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_560": {
+    "count": 0,
+    "edges": [
+      "node_518",
+      "node_519",
+      "node_559",
+      "node_561",
+      "node_602",
+      "node_603"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10241",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_308": {
+    "count": 0,
+    "edges": [
+      "node_266",
+      "node_267",
+      "node_307",
+      "node_309",
+      "node_350",
+      "node_351"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10246",
+          "count": 1
+        },
+        {
+          "id": "cluster_10405",
+          "count": 1
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10351",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10472",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_345": {
+    "count": 0,
+    "edges": [
+      "node_386",
+      "node_387",
+      "node_302",
+      "node_303",
+      "node_344",
+      "node_346"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10248",
+          "count": 1
+        }
+      ],
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10406",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10518",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10556",
+          "count": 1
+        }
+      ],
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10573",
+          "count": 5
+        }
+      ]
+    }
+  },
+  "node_865": {
+    "count": 0,
+    "edges": [
+      "node_864",
+      "node_866",
+      "node_906",
+      "node_907",
+      "node_822",
+      "node_823"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10249",
+          "count": 2
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10435",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_873": {
+    "count": 0,
+    "edges": [
+      "node_872",
+      "node_874",
+      "node_914",
+      "node_915",
+      "node_830",
+      "node_831"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10250",
+          "count": 1
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10394",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10441",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_859": {
+    "count": 0,
+    "edges": [
+      "node_900",
+      "node_901",
+      "node_816",
+      "node_817",
+      "node_858",
+      "node_860"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10256",
+          "count": 2
+        }
+      ],
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10331",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_941": {
+    "count": 0,
+    "edges": [
+      "node_898",
+      "node_899",
+      "node_940",
+      "node_942",
+      "node_982"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10258",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_479": {
+    "count": 0,
+    "edges": [
+      "node_480",
+      "node_521",
+      "node_522",
+      "node_437",
+      "node_438",
+      "node_478"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10260",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_570": {
+    "count": 0,
+    "edges": [
+      "node_612",
+      "node_613",
+      "node_528",
+      "node_529",
+      "node_569",
+      "node_571"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10262",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_908": {
+    "count": 0,
+    "edges": [
+      "node_866",
+      "node_867",
+      "node_907",
+      "node_909",
+      "node_950",
+      "node_951"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10274",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_825": {
+    "count": 0,
+    "edges": [
+      "node_867",
+      "node_868",
+      "node_783",
+      "node_784",
+      "node_824",
+      "node_826"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10275",
+          "count": 1
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10277",
+          "count": 1
+        }
+      ],
+      "CEIP EL OLIVAR": [
+        {
+          "id": "cluster_10352",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_998": {
+    "count": 0,
+    "edges": [
+      "node_997",
+      "node_999",
+      "node_1040",
+      "node_1041",
+      "node_956",
+      "node_957"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10286",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1047": {
+    "count": 0,
+    "edges": [
+      "node_1088",
+      "node_1089",
+      "node_1004",
+      "node_1005",
+      "node_1046",
+      "node_1048"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10287",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_1003": {
+    "count": 0,
+    "edges": [
+      "node_961",
+      "node_962",
+      "node_1002",
+      "node_1004",
+      "node_1045",
+      "node_1046"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10288",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_641": {
+    "count": 0,
+    "edges": [
+      "node_640",
+      "node_642",
+      "node_683",
+      "node_684",
+      "node_599",
+      "node_600"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10298",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_264": {
+    "count": 0,
+    "edges": [
+      "node_263",
+      "node_265",
+      "node_305",
+      "node_306",
+      "node_221",
+      "node_222"
+    ],
+    "schools": {
+      "CEIP RAFAEL ALBERTI": [
+        {
+          "id": "cluster_10301",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1128": {
+    "count": 0,
+    "edges": [
+      "node_1127",
+      "node_1129",
+      "node_1169",
+      "node_1170",
+      "node_1085",
+      "node_1086"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10304",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_651": {
+    "count": 0,
+    "edges": [
+      "node_609",
+      "node_610",
+      "node_650",
+      "node_652",
+      "node_693",
+      "node_694"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10305",
+          "count": 2
+        }
+      ],
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10508",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_222": {
+    "count": 0,
+    "edges": [
+      "node_264",
+      "node_265",
+      "node_180",
+      "node_181",
+      "node_221",
+      "node_223"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10309",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_638": {
+    "count": 0,
+    "edges": [
+      "node_680",
+      "node_681",
+      "node_596",
+      "node_597",
+      "node_637",
+      "node_639"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10311",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10439",
+          "count": 1
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10465",
+          "count": 2
+        },
+        {
+          "id": "cluster_10466",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_311": {
+    "count": 0,
+    "edges": [
+      "node_353",
+      "node_354",
+      "node_269",
+      "node_270",
+      "node_310",
+      "node_312"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10313",
+          "count": 1
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10414",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_303": {
+    "count": 0,
+    "edges": [
+      "node_261",
+      "node_262",
+      "node_302",
+      "node_304",
+      "node_345",
+      "node_346"
+    ],
+    "schools": {
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10315",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_904": {
+    "count": 0,
+    "edges": [
+      "node_903",
+      "node_905",
+      "node_946",
+      "node_947",
+      "node_862",
+      "node_863"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10319",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_312": {
+    "count": 0,
+    "edges": [
+      "node_354",
+      "node_355",
+      "node_270",
+      "node_271",
+      "node_311",
+      "node_313"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10322",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_696": {
+    "count": 0,
+    "edges": [
+      "node_737",
+      "node_738",
+      "node_653",
+      "node_654",
+      "node_695",
+      "node_697"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10324",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_144": {
+    "count": 0,
+    "edges": [
+      "node_102",
+      "node_103",
+      "node_143",
+      "node_145",
+      "node_186",
+      "node_187"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10325",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE SARAMAGO": [
+        {
+          "id": "cluster_10581",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_230": {
+    "count": 0,
+    "edges": [
+      "node_229",
+      "node_231",
+      "node_272",
+      "node_273",
+      "node_188",
+      "node_189"
+    ],
+    "schools": {
+      "CEIP MARIO BENEDETTI": [
+        {
+          "id": "cluster_10332",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1029": {
+    "count": 0,
+    "edges": [
+      "node_1028",
+      "node_1030",
+      "node_1070",
+      "node_1071",
+      "node_986",
+      "node_987"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10339",
+          "count": 1
+        },
+        {
+          "id": "cluster_10430",
+          "count": 2
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10490",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_915": {
+    "count": 0,
+    "edges": [
+      "node_873",
+      "node_874",
+      "node_914",
+      "node_916",
+      "node_957",
+      "node_958"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10358",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_995": {
+    "count": 0,
+    "edges": [
+      "node_996",
+      "node_1037",
+      "node_1038",
+      "node_953",
+      "node_954"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10361",
+          "count": 2
+        }
+      ],
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10387",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10393",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_682": {
+    "count": 0,
+    "edges": [
+      "node_640",
+      "node_681",
+      "node_683",
+      "node_723",
+      "node_724",
+      "node_639"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10363",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_394": {
+    "count": 0,
+    "edges": [
+      "node_352",
+      "node_353",
+      "node_393",
+      "node_395",
+      "node_436",
+      "node_437"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10364",
+          "count": 1
+        },
+        {
+          "id": "cluster_10423",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_432": {
+    "count": 0,
+    "edges": [
+      "node_389",
+      "node_390",
+      "node_431",
+      "node_433",
+      "node_473",
+      "node_474"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10367",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_687": {
+    "count": 0,
+    "edges": [
+      "node_688",
+      "node_644",
+      "node_645",
+      "node_686"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10381",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10460",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_430": {
+    "count": 0,
+    "edges": [
+      "node_387",
+      "node_388",
+      "node_429",
+      "node_431",
+      "node_471",
+      "node_472"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10384",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_989": {
+    "count": 0,
+    "edges": [
+      "node_988",
+      "node_947",
+      "node_948",
+      "node_1031"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10386",
+          "count": 2
+        }
+      ],
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10484",
+          "count": 3
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10501",
+          "count": 1
+        },
+        {
+          "id": "cluster_10528",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_781": {
+    "count": 0,
+    "edges": [
+      "node_738",
+      "node_739",
+      "node_780",
+      "node_782",
+      "node_822",
+      "node_823"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10389",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_225": {
+    "count": 0,
+    "edges": [
+      "node_224",
+      "node_226",
+      "node_267",
+      "node_268",
+      "node_183",
+      "node_184"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10397",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_142": {
+    "count": 0,
+    "edges": [
+      "node_100",
+      "node_101",
+      "node_141",
+      "node_143",
+      "node_184",
+      "node_185"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10403",
+          "count": 1
+        }
+      ],
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10444",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_441": {
+    "count": 0,
+    "edges": [
+      "node_482",
+      "node_483",
+      "node_398",
+      "node_399",
+      "node_440",
+      "node_442"
+    ],
+    "schools": {
+      "CEIP DULCE CHACON": [
+        {
+          "id": "cluster_10408",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "node_779": {
+    "count": 0,
+    "edges": [
+      "node_736",
+      "node_737",
+      "node_778",
+      "node_780",
+      "node_820",
+      "node_821"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10409",
+          "count": 1
+        }
+      ],
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10505",
+          "count": 1
+        },
+        {
+          "id": "cluster_10506",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_307": {
+    "count": 0,
+    "edges": [
+      "node_265",
+      "node_266",
+      "node_306",
+      "node_308",
+      "node_349",
+      "node_350"
+    ],
+    "schools": {
+      "CEIP JOSE ITURZAETA": [
+        {
+          "id": "cluster_10415",
+          "count": 2
+        }
+      ],
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10422",
+          "count": 2
+        },
+        {
+          "id": "cluster_10546",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10511",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_766": {
+    "count": 0,
+    "edges": [
+      "node_807",
+      "node_808",
+      "node_723",
+      "node_724",
+      "node_765",
+      "node_767"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10421",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_185": {
+    "count": 0,
+    "edges": [
+      "node_226",
+      "node_227",
+      "node_142",
+      "node_143",
+      "node_184",
+      "node_186"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10426",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_388": {
+    "count": 0,
+    "edges": [
+      "node_387",
+      "node_389",
+      "node_430",
+      "node_431",
+      "node_346",
+      "node_347"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10450",
+          "count": 2
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10513",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_480": {
+    "count": 0,
+    "edges": [
+      "node_481",
+      "node_522",
+      "node_523",
+      "node_438",
+      "node_439",
+      "node_479"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10455",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_958": {
+    "count": 0,
+    "edges": [
+      "node_999",
+      "node_1000",
+      "node_915",
+      "node_916",
+      "node_957",
+      "node_959"
+    ],
+    "schools": {
+      "CEIP HANS CHRISTIAN ANDERSEN": [
+        {
+          "id": "cluster_10456",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_224": {
+    "count": 0,
+    "edges": [
+      "node_225",
+      "node_266",
+      "node_267",
+      "node_182",
+      "node_183",
+      "node_223"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10457",
+          "count": 2
+        }
+      ],
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10459",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_660": {
+    "count": 0,
+    "edges": [
+      "node_618",
+      "node_619",
+      "node_659",
+      "node_661",
+      "node_702",
+      "node_703"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10482",
+          "count": 1
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10525",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_907": {
+    "count": 0,
+    "edges": [
+      "node_865",
+      "node_866",
+      "node_906",
+      "node_908",
+      "node_949",
+      "node_950"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10483",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_270": {
+    "count": 0,
+    "edges": [
+      "node_227",
+      "node_228",
+      "node_269",
+      "node_271",
+      "node_311",
+      "node_312"
+    ],
+    "schools": {
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10495",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_571": {
+    "count": 0,
+    "edges": [
+      "node_613",
+      "node_614",
+      "node_529",
+      "node_530",
+      "node_570",
+      "node_572"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10502",
+          "count": 2
+        }
+      ],
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10529",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_220": {
+    "count": 0,
+    "edges": [
+      "node_262",
+      "node_263",
+      "node_178",
+      "node_179",
+      "node_219",
+      "node_221"
+    ],
+    "schools": {
+      "CEIP LOS ALMENDROS": [
+        {
+          "id": "cluster_10514",
+          "count": 1
+        }
+      ],
+      "CEIP VICTORIA KENT": [
+        {
+          "id": "cluster_10533",
+          "count": 2
+        }
+      ],
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10558",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_738": {
+    "count": 0,
+    "edges": [
+      "node_737",
+      "node_739",
+      "node_780",
+      "node_781",
+      "node_696",
+      "node_697"
+    ],
+    "schools": {
+      "CEM HIPATIA": [
+        {
+          "id": "cluster_10517",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_1046": {
+    "count": 0,
+    "edges": [
+      "node_1088",
+      "node_1003",
+      "node_1004",
+      "node_1045",
+      "node_1047",
+      "node_1087"
+    ],
+    "schools": {
+      "CEIP LAS CIGUENAS": [
+        {
+          "id": "cluster_10538",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_637": {
+    "count": 0,
+    "edges": [
+      "node_679",
+      "node_680",
+      "node_595",
+      "node_596",
+      "node_636",
+      "node_638"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10540",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_778": {
+    "count": 0,
+    "edges": [
+      "node_736",
+      "node_777",
+      "node_779",
+      "node_819",
+      "node_820",
+      "node_735"
+    ],
+    "schools": {
+      "CEIP JOSE HIERRO": [
+        {
+          "id": "cluster_10542",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_393": {
+    "count": 0,
+    "edges": [
+      "node_352",
+      "node_392",
+      "node_394",
+      "node_435",
+      "node_436",
+      "node_351"
+    ],
+    "schools": {
+      "CEIP EL PARQUE": [
+        {
+          "id": "cluster_10547",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_143": {
+    "count": 0,
+    "edges": [
+      "node_101",
+      "node_102",
+      "node_142",
+      "node_144",
+      "node_185",
+      "node_186"
+    ],
+    "schools": {
+      "CEIPSO LA LUNA": [
+        {
+          "id": "cluster_10554",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_392": {
+    "count": 0,
+    "edges": [
+      "node_391",
+      "node_393",
+      "node_434",
+      "node_435",
+      "node_350",
+      "node_351"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10561",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "node_101": {
+    "count": 0,
+    "edges": [
+      "node_100",
+      "node_102",
+      "node_142",
+      "node_143",
+      "node_58",
+      "node_59"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10570",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_184": {
+    "count": 0,
+    "edges": [
+      "node_225",
+      "node_226",
+      "node_141",
+      "node_142",
+      "node_183",
+      "node_185"
+    ],
+    "schools": {
+      "CEIP JARAMA": [
+        {
+          "id": "cluster_10574",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "node_777": {
+    "count": 0,
+    "edges": [
+      "node_776",
+      "node_778",
+      "node_818",
+      "node_819",
+      "node_734",
+      "node_735"
+    ],
+    "schools": {
+      "CEIP LA ESCUELA": [
+        {
+          "id": "cluster_10579",
+          "count": 1
+        }
+      ]
+    }
+  }
+}
