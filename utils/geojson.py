@@ -140,13 +140,13 @@ def create_digraph_dot(bounds, nodes):
     for node in nodes:
         dot += f"  node_{int(node['id'])}[label=\"{int(node['id'])}\", shape=\"circle\"]\n"
         for edge in node['edges']:
-            edge_id_a = f"{int(node['id'])}->${edge}"
-            edge_id_b = f"{edge}->${int(node['id'])}"
+            edge_id_a = f"{int(node['id'])}->${int(edge)}"
+            edge_id_b = f"{int(edge)}->${int(node['id'])}"
             if edge_id_a not in edges:
-                dot += f"{int(node['id'])} -> {edge}\n"
+                dot += f"node_{int(node['id'])} -> node_{int(edge)}\n"
                 edges.add(edge_id_a)
             if edge_id_b not in edges:
-                dot += f"{edge} -> {int(node['id'])}\n"
+                dot += f"node_{int(edge)} -> node_{int(node['id'])}\n"
                 edges.add(edge_id_b)
     dot += "}\n"
     return dot
@@ -159,10 +159,10 @@ def create_graph_dot(bounds, nodes):
     for node in nodes:
         dot += f"  node_{int(node['id'])}[label=\"{int(node['id'])}\", shape=\"circle\"]\n"
         for edge in node['edges']:
-            edge_id_a = f"{int(node['id'])}--${edge}"
-            edge_id_b = f"{edge}--${int(node['id'])}"
+            edge_id_a = f"{int(node['id'])}--${int(edge)}"
+            edge_id_b = f"{int(edge)}--${int(node['id'])}"
             if edge_id_a not in edges:
-                dot += f"{int(node['id'])} -- {edge}\n"
+                dot += f"node_{int(node['id'])} -- node_{int(edge)}\n"
                 edges.add(edge_id_a)
             if edge_id_b not in edges:
                 edges.add(edge_id_b)

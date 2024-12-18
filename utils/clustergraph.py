@@ -14,6 +14,7 @@ mesh_file = Path(sys.argv[2])
 mesh_content = mesh_file.read_text(encoding='utf-8')
 mesh_data = json.loads(mesh_content)
 
+# crs = "urn:ogc:def:crs:OGC:1.3:CRS84"
 crs = "urn:ogc:def:crs:EPSG::3857"
 if mesh_data['crs']['properties']['name'] != crs or students_data['crs']['properties']['name'] != crs:
     raise ValueError('Invalid CRS')
