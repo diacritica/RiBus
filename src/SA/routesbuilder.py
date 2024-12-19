@@ -46,37 +46,119 @@ class Routesbuilder:
 
     def traverseRoute(self, route):
         dest_schools = set([s["id"] for s in route["schools"]])
-        print("Bus Route",route["id"],"towards schools",dest_schools)
+        if route["id"] == "A":
+            print("Route A dest_schools", dest_schools)
+        #print("Bus Route",route["id"],"towards schools",dest_schools)
      
         for c in route["path"]:
 
+            local_pickup = False
+            pickup = False
+            #0-cell
             mesh_node = self.m.graph.nodes[c["node_id"]]
-            mesh_node_schools = set(mesh_node["schools"])
 
-            school_intersection = dest_schools.intersection(mesh_node_schools)
+            local_pickup = self.takeSchoolClustersFromNode(route, dest_schools, mesh_node, c)
+            if local_pickup: pickup = True
 
-            if school_intersection:
+            #1-cell
+            # cell1_nodes = mesh_node["edges"]
+            # for c1 in cell1_nodes:
+            #     c1_mesh_node = self.m.graph.nodes[c1]
+            #     cell1_pickup = self.takeSchoolClustersFromNode(route, dest_schools, c1_mesh_node, c, "1cell")
+            #     if cell1_pickup: pickup = True
 
-                # there's a 0cell cluster
-                for school in school_intersection:
-                    for mns in mesh_node_schools:
-                        if school == mns:
-                            potential_clusters = mesh_node["schools"][school] 
-                            for pc in potential_clusters:
-                                if route["bus_available_capacity"] >= pc["count"]:
-                                    route["path"][route["node_index"][c["node_id"]]]["0cell"].append(pc)
-                                    route["bus_available_capacity"] -= pc["count"]
+            cell2_explored_nodes = list(nx.dfs_edges(self.m.graph, c["node_id"], depth_limit=2))
+            cell2_nodes = []
+            for tuple in cell2_explored_nodes:
+                cell2_nodes.append(tuple[0])
+                cell2_nodes.append(tuple[1])
+            cell2_nodes = set(cell2_nodes)
+            if route["id"] == "A":
+                print("Route A for node", c["node_id"], "has", len(cell2_nodes)," nodes")
 
-                                    self.m.removeClusterFromNode(pc["id"],c["node_id"])
+            #2-cell that includes 1-cell
+            for c2 in cell2_nodes:
+                c2_mesh_node = self.m.graph.nodes[c2]
+                cell2_pickup = self.takeSchoolClustersFromNode(route, dest_schools, c2_mesh_node, c, "2cell")
+                if cell2_pickup: pickup = True            
 
-                                    route["path"][route["node_index"][c["node_id"]]]["time"] = 1
-
-                                    
-                        else:
-                            pass
-            else:
+            if not pickup:
                 route["path"][route["node_index"][c["node_id"]]]["time"] = 0.60
                 route["cost"] += 10
+
+            
+            # We check if we can leave clusters at a school
+            if c["school"]:
+                school = c["school"][0]["id"]
+                self.leaveClustersAtSchool(route, c, school)
+
+
+    def leaveClustersAtSchool(self, route, c, dest_school):
+        # we have to remove school from dest_schools from that route!
+
+        #print("We leave people at school",dest_school)
+        freed_capacity = 0
+
+        cell0_clusters = c["0cell"]
+        for cell0_c in cell0_clusters:
+            if cell0_c["school"] == dest_school:
+                freed_capacity += cell0_c["count"]
+                cell0_clusters.remove(cell0_c)
+        cell1_clusters = c["1cell"]
+        for cell1_c in cell1_clusters:
+            if cell1_c["school"] == dest_school:
+                freed_capacity += cell1_c["count"]
+                cell1_clusters.remove(cell1_c)
+        
+        cell2_clusters = c["2cell"]
+        for cell2_c in cell2_clusters:
+            if cell2_c["school"] == dest_school:
+                freed_capacity += cell2_c["count"]
+                cell2_clusters.remove(cell2_c)
+
+        if route["id"] == "A":
+            print("Route", route["id"], "leaves", freed_capacity, "students at",dest_school, "at node",c["node_id"])
+            print("Previous capacity",route["bus_available_capacity"])
+            route["bus_available_capacity"] += freed_capacity
+            print("New capacity",route["bus_available_capacity"])
+        else:
+            route["bus_available_capacity"] += freed_capacity
+
+                
+    def takeSchoolClustersFromNode(self, route, dest_schools, mesh_node, c, cell="0cell"):
+
+        local_pickup = False
+        mesh_node_schools = set(mesh_node["schools"])
+
+        school_intersection = dest_schools.intersection(mesh_node_schools)
+
+        if school_intersection:
+
+            # from 0cell to 2cell clusters 
+            for school in school_intersection:
+                for mns in mesh_node_schools:
+                    if school == mns:
+                        potential_clusters = mesh_node["schools"][school] 
+                        for pc in potential_clusters:
+                            if route["bus_available_capacity"] >= pc["count"]:
+                                pc["school"] = school
+                                route["path"][route["node_index"][c["node_id"]]][cell].append(pc)
+                                route["bus_available_capacity"] -= pc["count"]
+
+                                self.m.removeClusterFromNode(pc["id"],c["node_id"])
+
+                                route["path"][route["node_index"][c["node_id"]]]["time"] = 1
+
+                                #print("+",pc["id"],"to",school,"for",dest_schools)
+                                local_pickup = True
+
+                                    
+                    else:
+                        pass
+
+        return local_pickup
+            
+
 
     def traverseAllRoutes(self, solution):
         solution["cost"] = 0
@@ -101,7 +183,7 @@ class Routesbuilder:
         for path in nx.all_simple_paths(self.bus_grid, source=school["node"], target=last_node, cutoff=length):
             if len(path) >= int(length*0.9):
                 connected_nodes = path
-                print("Creating initial bus route for bus:",bus["id"])
+                #print("Creating initial bus route for bus:",bus["id"])
                 break
         #connected_nodes = random.choice(list(nx.all_simple_paths(self.bus_grid, school["node"], last_node)))
         connected_nodes_length = len(connected_nodes)
@@ -222,7 +304,4 @@ if __name__=="__main__":
     print("Solution cost:",rb.solution["cost"])
     print("Children:",rb.getAttendedChildren())
 
-    n = rb.getNeighbourSolution()
-    print("Solution cost for neighbour:",n["cost"])
-    print("Children:",rb.getAttendedChildren(n))
 

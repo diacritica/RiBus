@@ -20,12 +20,9 @@ class Mesh:
     def removeClusterFromNode(self, cluster_id, node_id):
         n_schools = self.graph.nodes[node_id]["schools"]
 
-        cluster_to_be_deleted = None
-
         for s, cs in n_schools.items():
             for c in cs:
                 if cluster_id == c["id"]:
-                    #print("we delete!",c,"from",node_id)
                     cs.remove(c)
                     
 
