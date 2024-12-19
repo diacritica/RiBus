@@ -60,8 +60,8 @@ def create_graph_nodes_from_features(data):
         id_ = props['id']
         left, right, top, bottom = props['left'], props['right'], props['top'], props['bottom']
 
-        width = left - right
-        height = top - bottom
+        width = right - left
+        height = bottom - top
 
         half_width = width / 2
         half_height = height / 2
