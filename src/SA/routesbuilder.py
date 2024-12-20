@@ -489,6 +489,11 @@ if __name__=="__main__":
             print("Solution cost:",rb.solution["cost"])
             print("Students:", students_total)
             best_solution = students_total
+        if students_total > 600:
+            break
+    with open("out.json","w") as f:
+        f.write(json.dumps(rb.solution))
+    f.close()
 
 
     
