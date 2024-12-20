@@ -17,13 +17,13 @@ class Mesh:
 
         nx.set_node_attributes(self.graph, meshattrdata)
 
-    def removeClusterFromNode(self, cluster_id, node_id):
+    def removeClusterFromNode(self, cluster_id, node_id, origin):
         n_schools = self.graph.nodes[node_id]["schools"]
 
         for s, cs in n_schools.items():
             for c in cs:
                 if cluster_id == c["id"]:
-                    cs.remove(c)
+                    n_schools[s].remove(c)
                     
 
 

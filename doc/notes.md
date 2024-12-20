@@ -38,12 +38,15 @@ All bus routes are added IN ORDER to a list of bus routes
 ### Cost function
 
 - (1) No pickup on a cell: +50 pts (we promote useful cells)
-- (2) Pickup of 1-cell children: +2 pts (we promote same-cell children)
-- (3) Pickup of 2-cell children: +5 pts (we promote same-cell children)
 - (4) Child spending > 40 min on a bus ride: +50 pts (we promote reasonable bus time for children)
 - (5) Extra school beyond the second school: +10 pts (school monitors cost extra)
 
 Vulnerable children (wheel chair) might need a separate manual treatment after all bus routes have been sorted out. Alternatively, we might want to give a bonus to a bus route that pick a wheelchair child. Note: not all buses are wheelchari friendly!
+
+(ignoring)
+- (2) Pickup of 1-cell children: +2 pts (we promote same-cell children)
+- (3) Pickup of 2-cell children: +5 pts (we promote same-cell children)
+
 
 ### Definition of neighbour solution
 

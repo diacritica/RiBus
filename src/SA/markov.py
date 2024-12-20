@@ -1,4 +1,4 @@
-import random, math
+import random, math, json
 from routesbuilder import Routesbuilder
 
 total_attempts = 0
@@ -11,10 +11,26 @@ min_cost = 0
 
 
 initial_temperature = 250
-    
-rb = Routesbuilder()
-rb.initialize(6, "es", "cuñado", "tornar")
-rb.best_solution = rb.solution
+
+
+# list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
+
+buses = [{"id":"A","capacity":55},{"id":"B","capacity":55},{"id":"C","capacity":55},{"id":"D","capacity":60},
+        {"id":"E","capacity":55},{"id":"F","capacity":55},{"id":"G","capacity":55},{"id":"H","capacity":60},
+        {"id":"I","capacity":55}]
+
+avg_length_of_routes = 17
+delta_length = 3
+ 
+with open('../../utils/data/schools_epsg3857.json') as schools_file:
+    file_contents = schools_file.read()
+    list_of_schools = json.loads(file_contents)
+
+bus_grid_filename = "../../utils/data/mesh_roads_epsg3857.dot"
+child_grid_filename = "../../utils/data/mesh_full_epsg3857.dot"
+jsonattrfile = "../../utils/data/students_epsg3857.json"
+ 
+
 
 
 finished_calculus = False
@@ -56,7 +72,6 @@ def accept_neighbour(current, n, temperature):
     return False
 
 
-
 def cooling(initial_temperature):
     # main solution-space traversing process
 
@@ -77,13 +92,43 @@ def cooling(initial_temperature):
             attempts = max_chains*(attempts+chains_without_improvement)/(max_chains-chains_without_improvement+1)
             chains_without_improvement = 0
 
+        print("BS",rb.best_solution["cost"])
      
         temperature = temperature * alpha
     
 
-    print("BS",rb.best_solution)
 
 
 if __name__ == "__main__":
 
+    with open('../../utils/data/base.json') as base_routes_file:
+        file_contents = base_routes_file.read()
+        base_routes = json.loads(file_contents)
+
+    # list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
+
+ 
+    with open('../../utils/data/schools_epsg3857.json') as schools_file:
+        file_contents = schools_file.read()
+        list_of_schools = json.loads(file_contents)
+
+    bus_grid_filename = "../../utils/data/mesh_roads_epsg3857.dot"
+    child_grid_filename = "../../utils/data/mesh_full_epsg3857.dot"
+    jsonattrfile = "../../utils/data/students_epsg3857.json"
+ 
+
+    rb = Routesbuilder( bus_grid_filename, child_grid_filename, jsonattrfile, list_of_schools)
+
+    rb.best_solution = rb.solution
+
     cooling(initial_temperature)
+
+    with open("out.json","w") as f:
+        f.write(json.dumps(rb.solution))
+    f.close()
+    
+    print("Solution cost:",rb.solution["cost"])
+    print("Children:",rb.getAttendedChildren())
+
+
+    
