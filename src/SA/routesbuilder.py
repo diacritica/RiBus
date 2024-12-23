@@ -15,30 +15,39 @@ from mesh import Mesh
 class Routesbuilder:
 
     def __init__(self, bus_grid_filename, child_grid_filename, json_attr_filename,  list_of_schools):
-        self.G = nx.Graph()
 
         self.list_of_schools = list_of_schools
 
-         # We first build the bus graph
+         # We first build the bus graph.
+         # This is the graph that represents available streets for buses (which are more restricted than simply cars)
+         # This is necessarily a directed graph since there are one-way parts of the routes
         bgpg = pgv.AGraph(bus_grid_filename)
         self.bus_grid = nx.DiGraph(bgpg)
 
         # We also build the children clusters graph
+        # Adjacency here is purely physical and we can use a non-directed graph
+        # We consider this graph to represent a certain territorial isotropy
         cgpg = pgv.AGraph(child_grid_filename)
         self.child_grid = nx.Graph(cgpg)
 
         # We generate the global mesh with nodes and student data
+        # We "hydrate" the child graph with extra information to get our real global mesh
         self.m = Mesh(child_grid_filename, json_attr_filename)
 
+        # We have a list of bus routes
         self.routes = []
+
+        # self.solution is our main object, containing the list of routes and the total solution cost
         self.solution = {"solution":self.routes, "cost":10000}
 
-
+        # We keep a copy of the original global graph so we can recalculate new solutions
         self.original_mesh = copy.deepcopy(self.m)
-        self.init_solution = copy.deepcopy(self.solution)
 
 
     def initialize(self, buses, avg_length_of_routes, delta_length,):
+
+        # This method is a basic fallback for when we don't have initial bus routes supplied 
+        # It quickly becomes unusable with large graphs and big avg_length_of_routes
 
         # list of schools comes as [{"id":"name of the school", "node": node_id}, {},{},]
 
@@ -54,15 +63,13 @@ class Routesbuilder:
         print("list_of_schools", self.list_of_schools)
         print("-----------------------------------------")
 
-
-
         for bus in buses:
-            self.routes.append(self.getFreshRoute(bus))
-
- 
+            self.routes.append(self.getFreshRoute(self, bus))
 
         self.original_mesh = copy.deepcopy(self.m)
         self.init_solution = copy.deepcopy(self.solution)
+
+
 
     def traverseRoute(self, route):
    
@@ -86,7 +93,7 @@ class Routesbuilder:
             cell2_pickups = []
             for c2 in cell2_nodes:
                 c2_mesh_node = self.m.graph.nodes[c2]
-                cell2_pickups = self.takeSchoolClustersFromNode(route, dest_schools, c2_mesh_node, c, "2cell")
+                cell2_pickups = self.takeSchoolClustersFromNode(route, dest_schools, c2_mesh_node, c)
                 for cell2 in cell2_pickups:
                     self.m.removeClusterFromNode(cell2["id"],c2,"cell2")
                
@@ -123,35 +130,32 @@ class Routesbuilder:
                 
 
 
-
-
     def leaveClustersAtSchool(self, route, c, dest_school):
-        # we have to remove school from dest_schools from that route!
 
-        #print("We leave people at school",dest_school)
+        # We remove matching child_clusters for a dest_school node
+        # We update bus capacity and dest_schools for the remaining of the bus route
+
         freed_capacity = 0
-
       
         cell2_clusters = c["2cell"]
         to_be_left = []
+
         for cell2_c in cell2_clusters:
 
             if cell2_c["school"] == dest_school:
                 freed_capacity += cell2_c["count"]
                 to_be_left.append(cell2_c)
 
-
-        for tbl in to_be_left:
-            cell2_clusters.remove(tbl)
+        for c_cluster in to_be_left:
+            cell2_clusters.remove(c_cluster)
 
         route["bus_available_capacity"] += freed_capacity
         route["schools"].remove(c["school"])
 
         return to_be_left
 
-
                 
-    def takeSchoolClustersFromNode(self, route, dest_schools, mesh_node, c, cell="0cell"):
+    def takeSchoolClustersFromNode(self, route, dest_schools, mesh_node, c, cell="2cell"):
 
         pickup = []
         mesh_node_schools = set(mesh_node["schools"])
@@ -174,13 +178,9 @@ class Routesbuilder:
                         pc["school"] = school
 
                         c["time"] = 1
-                        
-
-                                    
                     
         return pickup
             
-
 
     def traverseAllRoutes(self, solution):
         solution["cost"] = 0
@@ -191,6 +191,7 @@ class Routesbuilder:
 
 
     def getCustomRoute(self, bus, dest_schools, nodes):
+
 
         schools = dest_schools
         route = {"id":bus["id"], "bus_capacity":bus["capacity"], "bus_available_capacity":bus["capacity"], "students":0, "orig_schools": schools, "schools":schools, "cost":0}
@@ -212,7 +213,7 @@ class Routesbuilder:
                 schools_by_node = []
                 sbn_list = self.getSchoolsByNode(node)
 
-                # FIXME redundant
+                # FIXME redundant?
                 for s in sbn_list:
                     schools_by_node.append(self.list_of_schools[s])
 
@@ -241,67 +242,6 @@ class Routesbuilder:
 
         return route
 
-
-    def getFreshRoute(self, bus):
-
-        school = self.list_of_schools[random.choice(list(self.list_of_schools))]
-        route = {"id":bus["id"], "bus_capacity":bus["capacity"], "bus_available_capacity":bus["capacity"], "students":0, "orig_schools": [school], "schools":[school], "cost":0}
-        length = self.avg_length_of_routes - random.choice(range(self.delta_length))
-        connected_nodes = []
-
-        # we take the last tuple, and then the second node, which has to be, by definition, a school node
-        last_node = list(nx.dfs_edges(self.bus_grid, school["node"], depth_limit=length))[-1][-1]
-
-        # we also need to make sure the path goes through 1 other school TBD. For now we pick one random
-        for path in nx.all_simple_paths(self.bus_grid, source=school["node"], target=last_node, cutoff=length):
-            if len(path) >= int(length):
-                connected_nodes = path
-                break
-        connected_nodes_length = len(connected_nodes)
-
-        path = []
-        node_index = {}
-
-        for index, node in enumerate(connected_nodes):
-            if index == 0:
-                path.append({"node_id":node, "school": [school], "0cell": [], 
-                    "1cell": [], 
-                    "2cell":[], 
-                    "payload": 0, "time": 2})
-            else:
-                schools_by_node = []
-                sbn_list = self.getSchoolsByNode(node)
-
-                # FIXME redundant
-                for s in sbn_list:
-                    schools_by_node.append(self.list_of_schools[s])
-
-                if schools_by_node:
-                    path.append({"node_id":node, "school": schools_by_node, "0cell": [], 
-                        "1cell": [], 
-                        "2cell":[], 
-                        "payload": 0, "time": 2})     
-                    route["schools"] = route["schools"] + schools_by_node
-                    route["orig_schools"] = route["orig_schools"] + schools_by_node
-
-                else:
-                    path.append({"node_id":node, "school": [], "0cell": [], 
-                        "1cell": [], 
-                        "2cell":[], 
-                        "payload": 0, "time": 0})     
-                     
-            # we create a reverse index to acount for the following path reverse
-            # print('route["schools"]',route["schools"])
-            node_index[node] = connected_nodes_length - index -1
-
-        route["path"] = path
-        route["path"].reverse()
-        route["node_index"] = node_index
-
-        if len(route["orig_schools"]) > 2:
-            route["cost"] += 10
-
-        return route
     
     def getSchoolsByNode(self, node):
         schools = []
@@ -403,7 +343,7 @@ class Routesbuilder:
         route = {"id":random_route["id"], "capacity":random_route["bus_capacity"], "bus_available_capacity":random_route["bus_capacity"], "schools":[], "cost":0}
 
         # We generate a completely new bus route for said bus
-        nr = self.getFreshRoute(route)
+        nr = self.getFreshRoute(self, route)
         self.temp_copy["solution"].append(nr)
         self.m = self.original_mesh
         self.traverseAllRoutes(self.temp_copy)
@@ -472,7 +412,7 @@ if __name__=="__main__":
 
     best_solution = 300
 
-    for i in range(1000):
+    for i in range(10000):
 
         rb = Routesbuilder(bus_grid_filename, child_grid_filename, jsonattrfile, list_of_schools)
  

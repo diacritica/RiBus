@@ -4,7 +4,7 @@ We have 1000 children, 9 buses and 17 schools.
 
 A bus route can be initialized by picking a final_node = node_with_school and then create a random path of a distance between X and Y. Such minimum (X) or maximum (Y) distance has to match maximum time for a child to be on a bus.
 
-A preferred way to initialize a bus route is to actually supply one to the program so we don't waste time generating them at the beginning.
+A **preferred way to initialize a bus route** is to actually supply one to the program so we don't waste time generating them at the beginning.
 
 Children are picked attending to dest_school and also child_address. A bus is forced to take, in order, all children at a particular child_address that go to the same school (but can ignore children at said child_address that go to a different school). This means that pickup operation operate at a cluster level, where a cluster can be of just one child. A cluster is defined by shared child_address and shared dest_school.
 
