@@ -192,7 +192,6 @@ class Routesbuilder:
 
     def getCustomRoute(self, bus, dest_schools, nodes):
 
-
         schools = dest_schools
         route = {"id":bus["id"], "bus_capacity":bus["capacity"], "bus_available_capacity":bus["capacity"], "students":0, "orig_schools": schools, "schools":schools, "cost":0}
         nodes.reverse()
