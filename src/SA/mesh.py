@@ -17,7 +17,7 @@ class Mesh:
 
         nx.set_node_attributes(self.graph, meshattrdata)
 
-    def removeClusterFromNode(self, cluster_id, node_id, origin):
+    def removeClusterFromNode(self, cluster_id, node_id):
         n_schools = self.graph.nodes[node_id]["schools"]
 
         for s, cs in n_schools.items():
