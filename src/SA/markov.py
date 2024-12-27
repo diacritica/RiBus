@@ -1,5 +1,5 @@
 import random, math, json
-from routesbuilder import Routesbuilder
+from routemanager import RouteManager
 
 total_attempts = 0
 chain_length = 10
@@ -7,7 +7,7 @@ max_chains = 100
 max_attempts = 30
 min_value = 0
 alpha = 0.95
-min_cost = 0
+min_cost = -700
 
 
 initial_temperature = 250
@@ -50,11 +50,14 @@ def markov_chain(temperature):
     while ( (accepted_attempts < chain_length) and (attempts < max_attempts)):
         # we might want to remove the attempts condition
 
-        current = rb.solution
-        n = rb.getNeighbourSolution()
+        current = rb.solutions["current"]
+        nss = rb.getNeighbourSolutionSetup(current[0])
+        n = rb.processSolutionSetup(nss)
+        rb.solutions["neighbour"] = [nss, n]
+        neighbour = rb.solutions["neighbour"]
         attempts += 1
 
-        if not accept_neighbour(current, n, temperature):
+        if not accept_neighbour(current, neighbour, temperature):
             rb.undoNeighbour()
         else:
             rb.acceptNeighbour()
@@ -64,9 +67,9 @@ def markov_chain(temperature):
 
 def accept_neighbour(current, n, temperature):
 
-    if n["cost"] <= current["cost"]:
+    if n[1]["total_children"] <= current[1]["total_children"]:
         return True
-    if ( random.random() < math.exp (-(n["cost"] - current["cost"])/temperature) ):
+    if ( random.random() < math.exp (-(n[1]["total_children"] - current[1]["total_children"])/temperature) ):
         return True
     
     return False
@@ -79,20 +82,18 @@ def cooling(initial_temperature):
 
     chains_without_improvement = 0
     attempts = 0
-    previous_cost = 2000
 
-
-    while ( (chains_without_improvement < max_chains) and (rb.best_solution["cost"] > min_cost) and (not finished_calculus)):
+    while ( (chains_without_improvement < max_chains) and (rb.best_solution["current"][1]["total_children"] > min_cost) and (not finished_calculus)):
 
         markov_chain(temperature)
-        if rb.solution["cost"] >= rb.best_solution["cost"]:
+        if rb.solutions["current"][1]["total_children"] >= rb.best_solution["current"][1]["total_children"]:
             chains_without_improvement += 1
         else:
-            rb.best_solution = rb.solution
+            rb.best_solution = rb.solutions
             attempts = max_chains*(attempts+chains_without_improvement)/(max_chains-chains_without_improvement+1)
             chains_without_improvement = 0
 
-        print("BS",rb.best_solution["cost"])
+        print("BS",rb.best_solution["current"][1]["total_children"])
      
         temperature = temperature * alpha
     
@@ -117,18 +118,26 @@ if __name__ == "__main__":
     jsonattrfile = "../../utils/data/students_epsg3857.json"
  
 
-    rb = Routesbuilder( bus_grid_filename, child_grid_filename, jsonattrfile, list_of_schools)
+    rb = RouteManager(bus_grid_filename, child_grid_filename, jsonattrfile, base_routes, list_of_schools)
 
-    rb.best_solution = rb.solution
+    fss = rb.solutions["current"][0]
+    fsp = rb.solutions["current"][1]
+
+    fsp = rb.processSolutionSetup(fss)
+
+    rb.best_solution = rb.solutions
+
+    with open("out.json","w") as f:
+        f.write("\n".join([r.__repr__() for r in rb.solutions["current"][1]["routes"]]))
+    f.close()
 
     cooling(initial_temperature)
 
-    with open("out.json","w") as f:
-        f.write(json.dumps(rb.solution))
+    with open("out_final.json","w") as f:
+        f.write("\n".join([r.__repr__() for r in rb.solutions["current"][1]["routes"]]))
     f.close()
     
-    print("Solution cost:",rb.solution["cost"])
-    print("Children:",rb.getAttendedChildren())
+    print("Solution cost:",rb.solutions["current"][1]["total_children"])
 
 
     
