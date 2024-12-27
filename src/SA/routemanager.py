@@ -99,7 +99,7 @@ class RouteManager:
         node_prev = random_route["path"][node_i+1]
      
         connected_nodes = [node_prev, node, node_post]
-        for path in nx.all_simple_paths(self.bus_grid, source=node_post, target=node_prev, cutoff=3):
+        for path in nx.all_simple_paths(self.bus_grid, source=node_post, target=node_prev, cutoff=2):
             if len(path) >= 2:
                 connected_nodes = path
                 break
@@ -130,10 +130,16 @@ class RouteManager:
         node_prev = random_route["path"][node_i+1]
      
         connected_nodes = [node_prev, node, node_post]
+
         for path in nx.all_simple_paths(self.bus_grid, source=node_post, target=node_prev, cutoff=3):
-            if len(path) >= 2:
-                connected_nodes = path
+            if len(path) == 1:
+                connected_nodes = [node_post, node_prev]
                 break
+            if len(path) > 1 and node not in path:
+                connected_nodes = path
+                #print("connected_nodes",node_post,node,node_prev, connected_nodes)
+                break
+
 
         first_part = random_route["path"][:node_i-1]
         last_part = random_route["path"][node_i+2:]
