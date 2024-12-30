@@ -126,30 +126,20 @@ class Route:
 
             
             cur_node_reachable_mesh_nodes = []
-            try:
-                cur_node_reachable_mesh_node_tuples = list(nx.dfs_edges(mesh.graph, cur_node["node_id"], depth_limit=2))
-            except:
-                print("Oops! CUR",cur_node["node_id"])
+            cur_node_reachable_mesh_node_tuples = list(nx.dfs_edges(mesh.graph, cur_node["node_id"], depth_limit=2))
 
             for tuple in cur_node_reachable_mesh_node_tuples:
-                if isinstance(tuple[0], str):
-                    cur_node_reachable_mesh_nodes.append(tuple[0])
-                if isinstance(tuple[1], str):
-                    cur_node_reachable_mesh_nodes.append(tuple[1])
+                cur_node_reachable_mesh_nodes.append(tuple[0])
+                cur_node_reachable_mesh_nodes.append(tuple[1])
             cur_node_reachable_mesh_nodes = set(cur_node_reachable_mesh_nodes)
 
             next_node_reachable_mesh_nodes = []
             
-            try:
-                next_node_reachable_mesh_node_tuples = list(nx.dfs_edges(mesh.graph, next_node["node_id"], depth_limit=2))
-            except:
-                print("Oops! NEXT",next_node["node_id"])
+            next_node_reachable_mesh_node_tuples = list(nx.dfs_edges(mesh.graph, next_node["node_id"], depth_limit=2))
 
             for tuple in next_node_reachable_mesh_node_tuples:
-                if isinstance(tuple[0], str):
-                    next_node_reachable_mesh_nodes.append(tuple[0])
-                if isinstance(tuple[1], str):
-                    next_node_reachable_mesh_nodes.append(tuple[1])
+                next_node_reachable_mesh_nodes.append(tuple[0])
+                next_node_reachable_mesh_nodes.append(tuple[1])
             next_node_reachable_mesh_nodes = set(next_node_reachable_mesh_nodes)
 
 
