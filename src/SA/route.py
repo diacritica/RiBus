@@ -19,12 +19,14 @@ class Route:
         self.id = bus["id"]
         self.bus_capacity = bus["capacity"]
         self.bus_available_capacity = bus["capacity"]
+        self.max_bus_available_capacity = int(bus["capacity"]*2)
 
         self.orig_dest_schools = []
         self.active_dest_schools = []
         self.all_schools = all_schools
 
         self.taken_child_clusters_per_path_node = {}
+        self.clusters_in_path_node = {}
 
         self.nodes = nodes
         self.path_setup(nodes)
@@ -45,6 +47,7 @@ class Route:
 
         for index, path_node in enumerate(self.path):
 
+            path_node_pickups = False
             # We carry over clusters from previous node to the current one
             # before evaluating which new clusters are added
             if index > 0:
@@ -55,10 +58,23 @@ class Route:
                 pickups = []
                 pickups = self.takeClustersFromNode(mesh, path_node, reachable_node)
 
+                if pickups:
+                    path_node_pickups = True
+
                 self.path[index]["clusters"] += pickups
+                for p in pickups:
+                    self.clusters_in_path_node[p["id"]] = index
                 
                 for cluster in pickups:
                     mesh.removeClusterFromNode(cluster["id"], reachable_node)
+
+            if path_node_pickups:
+                path_node["time"] = 1.0
+
+
+            # Cost function (2)
+            if not path_node_pickups:
+                self.cost += 10
 
             # we check if we can leave clusters at school
             dest_schools_by_node = self.getSchoolsByNode(self.all_schools, path_node["node_id"])
@@ -66,6 +82,10 @@ class Route:
                 for school in dest_schools_by_node:
                     pass
                     l = self.leaveClustersAtSchool(path_node["node_id"], school)
+
+            # Cost function (1)
+            if self.total_served_children < self.max_bus_available_capacity:
+                self.cost += (self.max_bus_available_capacity - self.total_served_children)*15
 
 
 
@@ -86,7 +106,18 @@ class Route:
 
         for cluster_to_be_left in to_be_left:
             self.path[index]["clusters"].remove(cluster_to_be_left)
-        
+
+            pos = self.clusters_in_path_node[cluster_to_be_left["id"]]
+            time_spent = sum([n["time"] for n in self.path[pos:index+1]])
+            
+            # Cost function (4) (5) (6)
+            if time_spent > 40:
+                self.cost += 5 * cluster_to_be_left["count"]
+            elif time_spent <= 3:
+                self.cost += 10 * cluster_to_be_left["count"]
+            elif 3 < time_spent < 8:
+                 self.cost += 5 * cluster_to_be_left["count"]
+
         self.bus_available_capacity += freed_capacity
         return to_be_left
 
@@ -103,14 +134,15 @@ class Route:
             for school in schools_intersection:
                 potential_clusters = mesh_node["schools"][school]
                 for cluster in potential_clusters:
-                    if self.bus_available_capacity >= cluster["count"]:
-                       
-                        self.taken_child_clusters_per_path_node[path_node["node_id"]].append(cluster)
-                        self.total_served_children += cluster["count"]
-                        self.bus_available_capacity -= cluster["count"]
+                    if self.total_served_children <= self.max_bus_available_capacity:
+                        if self.bus_available_capacity >= cluster["count"]:
+                        
+                            self.taken_child_clusters_per_path_node[path_node["node_id"]].append(cluster)
+                            self.total_served_children += cluster["count"]
+                            self.bus_available_capacity -= cluster["count"]
 
-                        clusters.append(cluster)
-                        cluster["school"] = school
+                            clusters.append(cluster)
+                            cluster["school"] = school
 
                     
         return clusters
@@ -184,13 +216,13 @@ class Route:
                         self.active_dest_schools.append(dest_school)
 
                 path.append({"node_id": node, "schools": dest_schools_by_node, "clusters": [], "reachable_nodes": [],
-                    "time": 2})     
+                    "time": 2.0})     
                 
                 # we have to update orig_schools too!
 
             else:
                 path.append({"node_id":node, "schools": [], 
-                             "reachable_nodes": [], "clusters": [], "time": 0})     
+                             "reachable_nodes": [], "clusters": [], "time": 0.60})     
                      
             # we create a reverse index to acount for the following path reverse
             # print('route["schools"]',route["schools"])

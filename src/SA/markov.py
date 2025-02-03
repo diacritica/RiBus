@@ -2,12 +2,14 @@ import random, math, json
 from routemanager import RouteManager
 
 total_attempts = 0
+
 chain_length = 10
 max_chains = 100
 max_attempts = 30
+
 min_value = 0
 alpha = 0.95
-min_cost = -700
+min_cost = 200
 
 
 initial_temperature = 250
@@ -67,9 +69,9 @@ def markov_chain(temperature):
 
 def accept_neighbour(current, n, temperature):
 
-    if n[1]["total_children"] <= current[1]["total_children"]:
+    if n[1]["total_cost"] <= current[1]["total_cost"]:
         return True
-    if ( random.random() < math.exp (-(n[1]["total_children"] - current[1]["total_children"])/temperature) ):
+    if ( random.random() < math.exp (-(n[1]["total_cost"] - current[1]["total_cost"])/temperature) ):
         return True
     
     return False
@@ -83,17 +85,17 @@ def cooling(initial_temperature):
     chains_without_improvement = 0
     attempts = 0
 
-    while ( (chains_without_improvement < max_chains) and (rb.best_solution["current"][1]["total_children"] > min_cost) and (not finished_calculus)):
+    while ( (chains_without_improvement < max_chains) and (rb.best_solution["current"][1]["total_cost"] > min_cost) and (not finished_calculus)):
 
         markov_chain(temperature)
-        if rb.solutions["current"][1]["total_children"] >= rb.best_solution["current"][1]["total_children"]:
+        if rb.solutions["current"][1]["total_cost"] >= rb.best_solution["current"][1]["total_cost"]:
             chains_without_improvement += 1
         else:
             rb.best_solution = rb.solutions
             attempts = max_chains*(attempts+chains_without_improvement)/(max_chains-chains_without_improvement+1)
             chains_without_improvement = 0
 
-        print("BS",rb.best_solution["current"][1]["total_children"])
+        print("BS",rb.best_solution["current"][1]["total_cost"],"with",rb.best_solution["current"][1]["total_children"])
      
         temperature = temperature * alpha
     
@@ -105,6 +107,9 @@ if __name__ == "__main__":
     with open('../../utils/data/base.json') as base_routes_file:
         file_contents = base_routes_file.read()
         base_routes = json.loads(file_contents)
+
+        #for route in base_routes:
+        #    route["path"] = route["path"][:-6]
 
     # list of schools comes as [{"school":"name of the school", "node_id": node_id}, {},{},]
 
@@ -130,6 +135,7 @@ if __name__ == "__main__":
     with open("out.json","w") as f:
         f.write("\n".join([r.__repr__() for r in rb.solutions["current"][1]["routes"]]))
     f.close()
+    print("Original solution cost:",rb.solutions["current"][1]["total_cost"],"with",rb.solutions["current"][1]["total_children"],"children")
 
     cooling(initial_temperature)
 
@@ -137,7 +143,7 @@ if __name__ == "__main__":
         f.write("\n".join([r.__repr__() for r in rb.solutions["current"][1]["routes"]]))
     f.close()
     
-    print("Solution cost:",rb.solutions["current"][1]["total_children"])
+    print("Solution cost:",rb.solutions["current"][1]["total_cost"],"with",rb.solutions["current"][1]["total_children"],"children")
 
 
     

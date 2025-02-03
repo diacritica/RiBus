@@ -79,7 +79,7 @@ class RouteManager:
             
             asolution["total_cost"] += route.cost
         
-        asolution["total_children"] = - sum([i.total_served_children for i in asolution["routes"]])
+        asolution["total_children"] = sum([i.total_served_children for i in asolution["routes"]])
 
         return asolution
 

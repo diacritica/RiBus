@@ -78,7 +78,7 @@ Per bus route:
 
 - We identify the dest_schools in such bus route.
 - We traverse the array of bus-connected cells and per cell we:
-    - If bus available_capacity allows, we take as many child_dest_school clusters that match  bus-route dest_schools 
+    - If bus available_capacity allows, we take as many child_dest_school clusters that match  bus-route dest_schools [note: perhaps we should already estimate time_to_school for each cluster and discard them already if this gohes beyond a safe threshold!]
     - We evaluate cost function for that cell
     - If the cell corresponds to a bus-route dest_school, we remove child_dest_school clusters and update available capacity
 
